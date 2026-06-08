@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>雙目標訓練課表 2026｜北橫 9/18 + 馬拉松 12/6</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Helvetica Neue',sans-serif;background:#f5f5f0;color:#1a1a1a;padding:12px;font-size:14px}
+h1{font-size:17px;font-weight:600;margin-bottom:2px}
+.subtitle{font-size:12px;color:#888;margin-bottom:12px}
+.hr-box{background:#fff;border-radius:10px;padding:12px;margin-bottom:14px;border:1px solid #e5e5e0}
+.hr-box h2{font-size:12px;font-weight:600;color:#555;margin-bottom:8px}
+.hr-grid{display:grid;grid-template-columns:1fr 1fr;gap:5px}
+.hr-item{padding:7px 9px;border-radius:7px;font-size:10px;line-height:1.5}
+.hr-item b{font-size:12px;display:block}
+.goals-row{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:14px}
+.goal-card{background:#fff;border-radius:10px;padding:11px 12px;border:1px solid #e5e5e0}
+.goal-card .icon{font-size:18px;margin-bottom:4px}
+.goal-card .label{font-size:10px;color:#888;margin-bottom:2px}
+.goal-card .val{font-size:13px;font-weight:600;color:#1a1a1a}
+.goal-card .sub{font-size:10px;color:#999;margin-top:2px}
+.legend{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:14px}
+.leg{font-size:10px;padding:3px 8px;border-radius:20px;font-weight:500}
+.month-block{margin-bottom:20px}
+.month-header{margin-bottom:6px}
+.month-title{font-size:15px;font-weight:600}
+.month-sub{font-size:11px;color:#888;margin-top:2px}
+.month-note{font-size:11px;color:#666;border-left:2px solid #ddd;padding-left:8px;margin:6px 0 8px;line-height:1.5}
+.cal-grid{background:#fff;border-radius:10px;overflow:hidden;border:1px solid #e5e5e0}
+.dow-header{display:grid;grid-template-columns:repeat(7,1fr);background:#f0efe8}
+.dow-header span{font-size:10px;font-weight:600;color:#888;text-align:center;padding:5px 0}
+.cal-week{display:grid;grid-template-columns:repeat(7,1fr);border-top:1px solid #e5e5e0}
+.cal-day{min-height:54px;padding:4px;border-right:0.5px solid #e5e5e0;cursor:pointer;position:relative}
+.cal-day:last-child{border-right:none}
+.cal-day.empty{background:#fafaf7;cursor:default}
+.day-num{font-size:10px;font-weight:600;color:#999;margin-bottom:2px}
+.day-badge{font-size:9px;padding:2px 4px;border-radius:3px;font-weight:500;line-height:1.3;margin-bottom:1px;display:block}
+.day-dist{font-size:9px;margin-top:1px}
+.modal-overlay{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.5);z-index:100;align-items:flex-end;justify-content:center}
+.modal-overlay.open{display:flex}
+.modal{background:#fff;border-radius:16px 16px 0 0;padding:20px 16px 32px;width:100%;max-width:480px;max-height:80vh;overflow-y:auto}
+.modal-date{font-size:12px;color:#888;margin-bottom:4px}
+.modal-title{font-size:16px;font-weight:600;margin-bottom:8px}
+.modal-badge{display:inline-block;font-size:11px;padding:3px 10px;border-radius:20px;font-weight:500;margin-bottom:10px}
+.modal-detail{font-size:13px;color:#444;line-height:1.7;margin-bottom:12px;white-space:pre-line}
+.modal-hr{font-size:12px;color:#666;background:#f5f5f0;padding:8px 12px;border-radius:8px;line-height:1.6}
+.modal-close{width:100%;padding:12px;background:#f0efe8;border:none;border-radius:10px;font-size:14px;font-weight:500;color:#333;cursor:pointer;margin-top:12px}
+</style>
+</head>
+<body>
+
+<h1>雙目標訓練課表 2026</h1>
+<p class="subtitle">8/1–12/6｜點日期看詳細課表</p>
+
+<div class="goals-row">
+  <div class="goal-card">
+    <div class="icon">🚴</div>
+    <div class="label">目標一</div>
+    <div class="val">9/18 北橫挑戰</div>
+    <div class="sub">竹北→宇老→羅東｜~130km 3000m+</div>
+  </div>
+  <div class="goal-card">
+    <div class="icon">🏃</div>
+    <div class="label">目標二</div>
+    <div class="val">12/6 Sub 3:50</div>
+    <div class="sub">新竹馬拉松｜目標 3:49:xx</div>
+  </div>
+</div>
+
+<div class="hr-box">
+  <h2>心率區間（最大心率 190｜靜止心率 49）</h2>
+  <div class="hr-grid">
+    <div class="hr-item" style="background:#EAF3DE"><b>141–155 bpm</b>Z2 長跑／輕跑｜跑步有氧基礎</div>
+    <div class="hr-item" style="background:#E1F5EE"><b>127–141 bpm</b>恢復跑｜配速 6:00–6:20</div>
+    <div class="hr-item" style="background:#FAEEDA"><b>165–173 bpm</b>Tempo｜5:05–5:10/km</div>
+    <div class="hr-item" style="background:#FAECE7"><b>179–186 bpm</b>VO2｜4:25–4:40/km</div>
+    <div class="hr-item" style="background:#E6F1FB"><b>159–166 bpm</b>MP｜5:27/km 馬拉松配速</div>
+    <div class="hr-item" style="background:#D6EAF8"><b>騎車 Z2</b>FTP 60–75%，保持能說話</div>
+  </div>
+</div>
+
+<div class="legend">
+  <span class="leg" style="background:#EAF3DE;color:#27500A">Z2跑</span>
+  <span class="leg" style="background:#dce8d4;color:#1a4a10">長跑</span>
+  <span class="leg" style="background:#D6EAF8;color:#0A3D5C">騎車</span>
+  <span class="leg" style="background:#C2E0F4;color:#07325A">騎爬坡</span>
+  <span class="leg" style="background:#fff0cc;color:#7a5000">恢復</span>
+  <span class="leg" style="background:#FAEEDA;color:#633806">Tempo</span>
+  <span class="leg" style="background:#FAECE7;color:#4A1B0C">VO2</span>
+  <span class="leg" style="background:#E6F1FB;color:#042C53">MP課</span>
+  <span class="leg" style="background:#FCEBEB;color:#501313">比賽</span>
+  <span class="leg" style="background:#f5e6ff;color:#4a0066">旅遊</span>
+  <span class="leg" style="background:#f0efe8;color:#888">休息</span>
+</div>
+
+<div id="calendars"></div>
+
+<div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
+  <div class="modal">
+    <p class="modal-date" id="modalDate"></p>
+    <p class="modal-title" id="modalTitle"></p>
+    <span class="modal-badge" id="modalBadge"></span>
+    <p class="modal-detail" id="modalDetail"></p>
+    <div class="modal-hr" id="modalHR"></div>
+    <button class="modal-close" onclick="closeModal()">關閉</button>
+  </div>
+</div>
+
+<script>
+const T = {
+  rest:   {label:'休息',  bg:'#f0efe8', color:'#888'},
+  bike:   {label:'騎車',  bg:'#D6EAF8', color:'#0A3D5C'},
+  climb:  {label:'騎爬坡',bg:'#C2E0F4', color:'#07325A'},
+  z2:     {label:'Z2跑',  bg:'#EAF3DE', color:'#27500A'},
+  long:   {label:'長跑',  bg:'#dce8d4', color:'#1a4a10'},
+  rec:    {label:'恢復',  bg:'#fff0cc', color:'#7a5000'},
+  tempo:  {label:'Tempo', bg:'#FAEEDA', color:'#633806'},
+  vo2:    {label:'VO2',   bg:'#FAECE7', color:'#4A1B0C'},
+  mp:     {label:'MP課',  bg:'#E6F1FB', color:'#042C53'},
+  race:   {label:'比賽',  bg:'#FCEBEB', color:'#501313'},
+  travel: {label:'旅遊',  bg:'#f5e6ff', color:'#4a0066'},
+};
+
+const S = {};
+function a(m,d,type,title,detail,hr){S[`${m}-${d}`]={type,title,detail,hr};}
+
+// ══════════════════════════════════════════
+// 8月：武嶺後恢復 → 旅遊空白 → 有氧重建
+// 8/1=週六, 8/2=週日, 8/3–8/9=旅遊
+// 8/10=週一, 8/11=週二...
+// 結構：Mon=rest, Tue=bike, Wed=z2, Thu=climb, Fri=z2, Sat=long, Sun=bike
+// ══════════════════════════════════════════
+
+// 8/1（週六）武嶺隔日－輕鬆恢復跑
+a(8,1,'rec','武嶺隔日恢復跑｜4k',
+  '昨天武嶺剛完成，今天最輕鬆的慢跑，腿有酸就縮短或改走路。\n心率壓在 130 以下，就是讓血液循環幫助恢復，絕對不要跑快。',
+  '心率 ≤130 bpm（非常輕鬆）');
+
+// 8/2（週日）輕鬆騎
+a(8,2,'bike','武嶺後騎車 Z2｜60min',
+  '武嶺後第二天，輕鬆平地騎，用旋轉動作幫助排乳酸。\nFTP 55–65%，不要爬坡，不要趕速度，就是讓腿動一動。',
+  '心率 125–138 bpm（Z1–Z2 低段）');
+
+// 8/3–8/9 旅遊
+a(8,3,'travel','旅遊｜完全休息','好好享受旅遊！不用想訓練的事。\n身體正在恢復，旅遊走路就是最好的主動恢復。','—');
+a(8,4,'travel','旅遊｜完全休息','好好享受旅遊！','—');
+a(8,5,'travel','旅遊｜完全休息','好好享受旅遊！','—');
+a(8,6,'travel','旅遊｜完全休息','好好享受旅遊！','—');
+a(8,7,'travel','旅遊｜完全休息','好好享受旅遊！','—');
+a(8,8,'travel','旅遊｜完全休息','好好享受旅遊！','—');
+a(8,9,'travel','旅遊｜完全休息','最後一天旅遊，明天回來重啟訓練。\n回來後不要急著補課，按計畫走就好。','—');
+
+// ── 8/10（週一）起重啟訓練 ──
+// 旅遊+武嶺後第一週：全輕鬆，不要急
+a(8,10,'rest','休息｜重啟準備日','旅遊剛回，今天好好休息，明天開始重新訓練。\n補充睡眠、整理裝備、確認計畫。','—');
+a(8,11,'bike','騎車 Z2｜60min（輕鬆重啟）',
+  '旅遊回來第一次騎，不要急著追回來。\n平地輕鬆騎，心率控制在 Z2 低段，感受腿感狀態。\n如果腿感差，縮短到 45min 也沒關係。',
+  '心率 138–148 bpm（Z2 低段）');
+a(8,12,'z2','輕跑 Z2｜4k（輕鬆重啟）',
+  '旅遊回來第一跑，從小量開始。\n心率控制在 141–155，夏天跑到 6:20–6:30 完全正常。\n目的是讓身體重新習慣跑步節律，不是練體能。',
+  '心率 141–155 bpm');
+a(8,13,'bike','騎車 Z2｜75min',
+  '平地或微丘陵，Z2 穩定騎。\n感受訓練感恢復的程度，如果精神好可以加一段輕微爬坡。',
+  '心率 138–152 bpm');
+a(8,14,'z2','輕跑 Z2｜5k',
+  '心率 141–155，配速跟著心率走，夏天不要強行壓配速。',
+  '心率 141–155 bpm');
+a(8,15,'long','長跑 Z2｜12k（恢復後第一長跑）',
+  '旅遊回來第一個週末長跑，12k。\n心率 141–155，夏天配速到 6:10–6:20 完全正常。\n注意補水，每 20–25 分鐘補一口水。\n北橫只求完賽，跑步基礎才是拚 sub3:50 的本，這月跑步里程要穩穩往上帶。',
+  '心率 141–155 bpm');
+a(8,16,'bike','騎車 Z2｜1.5h',
+  'Z2 有氧騎，可以包含 200–300m 爬升的路線，開始為北橫熱身。',
+  '心率 138–152 bpm');
+
+// 8/17 週一
+a(8,17,'rest','休息','恢復日。','—');
+a(8,18,'bike','騎車 Z2｜75min',
+  '維持有氧騎乘基礎，可以加入 1–2 段 3–5 分鐘爬坡嘗試，不用全力。',
+  '心率 138–158 bpm');
+a(8,19,'z2','輕跑 Z2｜6k','心率 141–155。','心率 141–155 bpm');
+a(8,20,'climb','騎爬坡 Z3 肌耐力｜75min',
+  '北橫只求完賽，重點是長時間穩定爬坡的肌耐力，不是爬坡功率峰值。\n路線建議：竹北→內灣方向，找連續爬坡路段。\n主課：2×15min 爬坡（FTP 75–82%／Z3），組間輕鬆下坡恢復。\n踏頻維持 75–85rpm，學會「能撐很久」的舒適爬坡節奏，不要逼到喘不過氣。',
+  '爬坡段 158–168 bpm（Z3）｜恢復段 138–148 bpm');
+a(8,21,'z2','輕跑 Z2｜6k','心率 141–155。','心率 141–155 bpm');
+a(8,22,'long','長跑 Z2｜14k',
+  '心率 141–155，維持有氧基礎。\n夏天配速放慢沒關係，跑到 6:10 完全正常。\n每週加量約 2k，穩穩堆積跑步里程。',
+  '心率 141–155 bpm');
+a(8,23,'bike','騎車長騎｜2h（含爬坡）',
+  '為北橫準備的週末長騎，開始加入爬升量。\n建議路線：竹北→峨眉→北埔→竹東方向，爬升 600–800m。\nZ2 為主，爬坡段可以到 Z3，不要全程強推。',
+  '心率 138–158 bpm（爬坡段可到 162）');
+
+// 8/24 週一
+a(8,24,'rest','休息','恢復日。','—');
+a(8,25,'bike','騎車 Z2｜75min',
+  '維持有氧基礎。可以加入 2–3 段短爬坡練習。',
+  '心率 138–152 bpm');
+a(8,26,'z2','輕跑 Z2｜7k','心率 141–155。','心率 141–155 bpm');
+a(8,27,'climb','騎爬坡 Z3 肌耐力｜75min',
+  '爬坡肌耐力第二週，延長單次爬坡時間。\n主課：2×20min 爬坡（FTP 75–80%／Z3），組間輕鬆下坡恢復。\n模擬北橫的長坡：用穩定踏頻維持，全程坐姿，不要起身抽車。\n重點是「20 分鐘還能輕鬆對話」的強度，這才是完賽北橫需要的。',
+  '爬坡段 156–166 bpm（Z3）｜恢復段 138–148 bpm');
+a(8,28,'z2','輕跑 Z2｜7k','心率 141–155。','心率 141–155 bpm');
+a(8,29,'long','長跑 Z2｜16k',
+  '心率 141–155，本月長跑頂峰，跑步基礎已堆到 16k。\n夏天不要強行壓配速，每 25 分鐘補一次水。\n站穩 16k 後，10 月接 VO2 與長跑加 MP 就有紮實的起點。',
+  '心率 141–155 bpm');
+a(8,30,'bike','騎車長騎｜2.5h（北橫肌耐力模擬）',
+  '本月最重要的長騎！模擬北橫的「長時間爬升」感受，重點是耐力不是強度。\n建議爬升 1000–1200m，如果能去大山背方向更好。\n全程 Z2 為主，爬坡段最多到 Z3（不要進 Z4），後段練習在疲勞下維持穩定踏頻。\n補給策略：每 40–45min 補一次能量（鹽錠＋凝膠或香蕉），完整演練比賽補給節奏。',
+  '爬坡段 156–166 bpm（Z3）｜平路 138–152 bpm');
+a(8,31,'rest','休息','長騎後完全恢復，好好休息。','—');
+
+// ══════════════════════════════════════════
+// 9月：北橫備賽衝刺（9/1–9/17）→ 9/18 比賽 → 切換跑步主導
+// 9/1=週二
+// ══════════════════════════════════════════
+
+// 9/1–9/7：北橫前最後強化週（週一=騎爬，週二=z2跑，週四=騎爬，週五=z2，週六=長騎，週日=恢復）
+a(9,1,'climb','騎爬坡 Z3 肌耐力｜75min（北橫備賽）',
+  '比賽前 17 天，爬坡肌耐力最後一次強化（仍是 Z3，不逼峰值）。\n主課：2×20min 爬坡（FTP 76–82%／Z3），組間 4min 輕鬆恢復。\n踏頻 75–82rpm，練習長坡的配速感，想像宇老前的連續爬升。\n完賽北橫靠的是這種「能撐很久」的能力，不是短時間爆發。',
+  '爬坡段 158–166 bpm（Z3）｜恢復段 138–148 bpm');
+a(9,2,'z2','輕跑 Z2｜6k',
+  '騎車訓練量大，跑步用來維持有氧基礎，不要加量。\n心率 141–155，配速跟著心率走。',
+  '心率 141–155 bpm');
+a(9,3,'rest','休息','恢復日。','—');
+a(9,4,'climb','騎爬坡 Z3 肌耐力｜75min（北橫備賽）',
+  '主課：1×30min 連續爬坡（FTP 74–80%／Z3）+ 緩和。\n找最長的一段坡，一口氣爬完，這最接近北橫宇老段的真實感受。\n全程坐姿、穩定呼吸，學會在長坡上「不爆」的配速，這就是完賽的關鍵。\n比賽 14 天前，最後一次長爬坡訓練。',
+  '爬坡段 155–165 bpm（Z3）');
+a(9,5,'z2','輕跑 Z2｜6k','心率 141–155。','心率 141–155 bpm');
+a(9,6,'bike','長騎｜2.5h（北橫完整模擬）',
+  '比賽前最後一次長距離騎乘！最重要的模擬，重點是耐力與補給，不是強度。\n路線建議：從竹北往宇老方向（或芎林→關西方向），爬升 1500–1800m。\n• 前 60 分鐘 Z2 暖身騎\n• 中間 60 分鐘模擬比賽爬坡（Z3，能對話的強度，不要進 Z4）\n• 最後 30 分鐘 Z2 收尾\n完整演練比賽補給節奏，每 45min 補一次。\n腿感不好時寧可降強度也要騎滿時間——肌耐力比功率峰值重要。',
+  '整體 Z2–Z3｜爬坡段 156–166 bpm');
+a(9,7,'rest','休息','長騎後完全恢復。','—');
+
+// 9/8–9/13：北橫減量週（Taper）
+a(9,8,'bike','騎車 Z2 減量｜60min',
+  '進入北橫賽前減量！從今天起降低訓練量，保留體能。\n輕鬆平地騎，不要爬坡，心率控制在 Z2 低段。\n維持腿感，不要休息太久導致腿感下降。',
+  '心率 135–148 bpm');
+a(9,9,'z2','輕跑 Z2｜5k',
+  '輕鬆維持跑步習慣，不要加強度。\n心率 141–155，比賽前保留體能比訓練更重要。',
+  '心率 141–155 bpm');
+a(9,10,'rest','休息','賽前減量，好好休息。','—');
+a(9,11,'bike','騎車 Z2 含短衝｜50min',
+  '賽前 7 天輕鬆騎，但加入 3–4 次 30 秒加速（到 Z4），讓腿感清醒。\n整體輕鬆，加速只是讓肌肉記憶高強度感，不是訓練。',
+  '整體 心率 135–148｜衝段 175–183 bpm（30秒）');
+a(9,12,'z2','輕跑 Z2｜4k','非常輕鬆，維持節律就好，心率 141–150。','心率 141–150 bpm');
+a(9,13,'rest','休息','賽前第 5 天，好好休息充電。','—');
+
+// 9/14（週日）
+a(9,14,'bike','騎車 Z2 賽前活化｜45min',
+  '賽前第 4 天，輕鬆騎維持腿感。\n不要試圖「補最後一課」，體能不會在這 4 天內提升。\n確認裝備、補給清單，保持放鬆心態。\n補給建議：比賽前一天多補碳水（白飯、義大利麵）。',
+  '心率 130–145 bpm（非常輕鬆）');
+
+// 9/15（週一）
+a(9,15,'rest','休息｜準備北橫補給',
+  '比賽前 3 天，完全休息。\n待辦事項：\n• 確認車子機械狀況（變速、煞車、胎壓）\n• 準備補給（鹽錠、凝膠 6–8 包、香蕉、備用胎）\n• 確認路線與補水點位置\n• 早點睡，保持好睡眠品質',
+  '—');
+
+// 9/16（週二）
+a(9,16,'bike','賽前輕騎｜30min 含加速',
+  '比賽前 2 天，非常短的輕騎。\n包含 2–3 次 20 秒小加速，讓腿感清醒。\n今晚補碳水餐（大碗白飯或義大利麵）。',
+  '心率 130–145 bpm（輕鬆）｜衝段 170+ bpm（20秒×2）');
+
+// 9/17（週三）
+a(9,17,'rest','休息｜北橫前一天',
+  '完全休息！不要騎車，不要跑步。\n• 多喝水，保持水分充足\n• 確認出發時間與集合地點\n• 準備好所有裝備，晚上 9–10 點就寢\n• 早餐建議：出發前 2 小時吃，白稀飯+香蕉+1 顆茶葉蛋\n\n路線提醒：竹北→宇老（約 60km/1800m）→ 北橫→羅東，後段注意風速，下坡穿好外套。',
+  '—');
+
+// 9/18（週四）北橫比賽日！
+a(9,18,'race','🚴 竹北→宇老→北橫→羅東 ⭐',
+  '比賽日！全程約 130km，爬升 2800–3200m。\n\n配速策略：\n• 竹北出發：Z2 熱身，前 20km 保守，不要被隊友帶太快\n• 宇老前爬升段（最陡）：Z3–Z4，踏頻維持 72–80rpm，不要搖車\n• 宇老到明池：享受下坡，注意路面，補充食物\n• 明池之後：Z2–Z3 穩定推進，評估剩餘體力\n• 最後 30km 到羅東：依體力決定是否提速\n\n補給計畫（每 40–45min 一次）：\n• 凝膠 1 包 + 鹽錠 1 顆\n• 補水點（宇老、明池）喝足水\n• 攜帶至少 2 瓶水（750ml×2）出發\n\n預計完賽時間：6.5–8 小時，不急，安全完賽最重要！',
+  '整體均速 Z2–Z3｜爬坡段 170–180 bpm');
+
+// 9/19（週五）賽後恢復
+a(9,19,'rest','北橫後完全休息',
+  '130km 北橫結束，今天完全休息！\n• 補充大量碳水和蛋白質（今天可以盡情吃）\n• 多喝水幫助恢復\n• 輕鬆走路即可，不要騎車或跑步\n• 好好睡一覺，讓身體恢復',
+  '—');
+
+// 9/20（週六）
+a(9,20,'rec','北橫後恢復跑｜4k',
+  '北橫完成後第二天，輕鬆慢跑讓腿活動。\n心率壓在 130 以下，跑不動就走，完全不要要求配速。\n目的是幫助恢復，不是訓練。',
+  '心率 ≤132 bpm');
+
+// 9/21（週日）
+a(9,21,'bike','輕鬆恢復騎｜60min Z2',
+  '北橫後第三天，輕鬆平地騎恢復。\nZ2 低段，不要爬坡，讓腿感受一下騎車狀態。',
+  '心率 130–142 bpm');
+
+// ── 9月後半：切換跑步主導，導入 Tempo ──
+// 9/22 週一
+a(9,22,'rest','休息','恢復日。','—');
+a(9,23,'bike','騎車 Z2｜75min','維持有氧基礎，北橫已完成，現在騎車是輔助。','心率 138–152 bpm');
+a(9,24,'z2','輕跑 Z2｜7k',
+  '北橫後跑步量逐步回歸。\n心率 141–155，配速跟著心率走，不要強行壓配速。',
+  '心率 141–155 bpm');
+a(9,25,'tempo','Tempo｜9k 總（北橫後首次 Tempo）',
+  '北橫完成！現在切換到馬拉松模式，導入 Tempo。\n課表：熱身 2k + 6×800m（90秒慢跑休）+ 冷卻 2k\n800m 段落配速 5:05–5:10/km，心率控制在 165–173。\n第一次 Tempo，如果沒達到配速沒關係，以心率為準。',
+  '心率 165–173 bpm');
+a(9,26,'rec','恢復跑｜5k',
+  'Tempo 後的恢復跑，心率 127–141，配速 6:00–6:20。\n不要跑快，讓身體吸收昨天的訓練。',
+  '心率 127–141 bpm');
+a(9,27,'long','長跑 Z2｜18k',
+  '北橫已完成，跑步資源全開！長跑直接拉到 18k。\n心率 141–155，配速跟著心率走。\n站穩 18k，10/1 接 VO2 與長跑加 MP 就有高起點，這對拚 sub3:50 很關鍵。',
+  '心率 141–155 bpm');
+a(9,28,'bike','騎車 Z2｜1.5h',
+  'Z2 有氧騎，維持腿部血液循環，幫助長跑後恢復。',
+  '心率 138–152 bpm');
+a(9,29,'rest','休息','恢復日。','—');
+a(9,30,'bike','騎車 Z2｜75min','維持有氧基礎。','心率 138–152 bpm');
+
+// ══════════════════════════════════════════
+// 10月：強度建立期（VO2 + 長跑加 MP）
+// 10/1=週四，跑步為主
+// Mon=rest, Tue=bike, Wed=z2, Thu=VO2, Fri=rec, Sat=long, Sun=bike
+// ══════════════════════════════════════════
+a(10,1,'vo2','VO2｜10k 總',
+  '10 月開始！正式進入馬拉松強度建立期。\n課表：熱身 2k + 4×5min（3分慢跑休）+ 冷卻 2k\n配速 4:25–4:40/km，每組結束要喘到說話困難。\n心率應達到 179–186，低了就稍微加速。',
+  '心率 179–186 bpm');
+a(10,2,'rec','恢復跑｜6k','心率 127–141，配速 6:00–6:20。','心率 127–141 bpm');
+a(10,3,'long','長跑｜18k（Z2）',
+  '前 18k 全 Z2，心率 141–155。\n本週長跑不加 MP 段，讓身體先適應 VO2 後的週跑量。',
+  '心率 141–155 bpm');
+a(10,4,'bike','騎車長騎｜2h Z2','Z2 強度。','心率 138–152 bpm');
+a(10,5,'rest','休息','恢復日。','—');
+a(10,6,'bike','騎車 Z2｜75min','維持有氧基礎。','心率 138–152 bpm');
+a(10,7,'z2','輕跑 Z2｜8k','心率 141–155。','心率 141–155 bpm');
+a(10,8,'vo2','VO2｜10.5k 總',
+  '課表：熱身 2k + 5×5min（3分慢跑休）+ 冷卻 2k\n配速 4:25–4:40/km。組數比上週多一組，感受強度疊加。',
+  '心率 179–186 bpm');
+a(10,9,'rec','恢復跑｜6k','心率 127–141，配速 6:00–6:20。','心率 127–141 bpm');
+a(10,10,'long','長跑｜20k（後 5k MP）',
+  '首次加入 MP 段！\n前 15k Z2（心率 141–155）\n後 5k MP 配速 5:27/km（心率 159–166）\n後段跑不住可以放慢，不要強撐，以心率為準。',
+  '前段 141–155｜後段 159–166 bpm');
+a(10,11,'bike','騎車長騎｜2h Z2','Z2 強度。','心率 138–152 bpm');
+a(10,12,'rest','休息','恢復日。','—');
+a(10,13,'bike','騎車 Z2｜75min','維持有氧基礎。','心率 138–152 bpm');
+a(10,14,'z2','輕跑 Z2｜8k','心率 141–155。','心率 141–155 bpm');
+a(10,15,'vo2','VO2｜11k 總',
+  '課表：熱身 2k + 4×6min（3分慢跑休）+ 冷卻 2k\n配速 4:25–4:40/km。改成 6min 長組，更接近比賽需要的耐力。',
+  '心率 179–186 bpm');
+a(10,16,'rec','恢復跑｜6k','心率 127–141，配速 6:00–6:20。','心率 127–141 bpm');
+a(10,17,'long','長跑｜22k（後 8k MP）',
+  '前 14k Z2（心率 141–155）\n後 8k MP 配速 5:27/km（心率 159–166）\n長跑後半加入 MP，讓身體習慣比賽配速。',
+  '前段 141–155｜後段 159–166 bpm');
+a(10,18,'bike','騎車長騎｜2–2.5h Z2','Z2 強度。','心率 138–152 bpm');
+a(10,19,'rest','休息','恢復日。','—');
+a(10,20,'bike','騎車 Z2｜75min','維持有氧基礎。','心率 138–152 bpm');
+a(10,21,'z2','輕跑 Z2｜9k','心率 141–155。','心率 141–155 bpm');
+a(10,22,'vo2','VO2｜11.5k 總',
+  '本月最高 VO2 量！\n課表：熱身 2k + 5×6min（3分慢跑休）+ 冷卻 2k\n配速 4:25–4:40/km，5 組全力完成。完成後非常有成就感！',
+  '心率 179–186 bpm');
+a(10,23,'rec','恢復跑｜6k','心率 127–141，配速 6:00–6:20。','心率 127–141 bpm');
+a(10,24,'long','長跑｜24k（後 12k MP）',
+  '前 12k Z2（心率 141–155）\n後 12k MP 配速 5:27/km（心率 159–166）\n長跑後半幾乎全是 MP，重要里程碑。完成代表你的馬拉松配速非常穩固。',
+  '前段 141–155｜後段 159–166 bpm');
+a(10,25,'bike','騎車長騎｜2–2.5h Z2','Z2 強度。','心率 138–152 bpm');
+a(10,26,'rest','休息','恢復日。','—');
+a(10,27,'bike','騎車 Z2｜75min','維持有氧基礎。','心率 138–152 bpm');
+a(10,28,'z2','輕跑 Z2｜8k','心率 141–155。','心率 141–155 bpm');
+a(10,29,'vo2','VO2｜10k 總（緩降）',
+  '課表：熱身 2k + 4×5min（3分慢跑休）+ 冷卻 2k\n配速 4:25–4:40/km，強度小降，準備進入 11 月 MP 專項期。',
+  '心率 179–186 bpm');
+a(10,30,'rec','恢復跑｜6k','心率 127–141，配速 6:00–6:20。','心率 127–141 bpm');
+a(10,31,'long','長跑｜24k（後 12k MP）',
+  '前 12k Z2（心率 141–155）\n後 12k MP 配速 5:27/km（心率 159–166）\n10 月尾聲，鞏固長跑能力。',
+  '前段 141–155｜後段 159–166 bpm');
+
+// ══════════════════════════════════════════
+// 11月：專項衝刺期（MP課 + 頂峰長跑）→ 11/23 起減量
+// 11/1=週日
+// Mon=rest, Tue=bike, Wed=z2, Thu=MP課, Fri=rec, Sat=long, Sun=bike
+// ══════════════════════════════════════════
+a(11,1,'bike','騎車長騎｜2h Z2','Z2 強度。','心率 138–152 bpm');
+a(11,2,'rest','休息','恢復日。','—');
+a(11,3,'bike','騎車 Z2｜75min','維持有氧基礎。','心率 138–152 bpm');
+a(11,4,'z2','輕跑 Z2｜8k','心率 141–155。','心率 141–155 bpm');
+a(11,5,'mp','MP課｜12k 總',
+  '正式進入 MP 週課！\n課表：熱身 2k + 8k MP（5:27/km）+ 冷卻 2k\n約 68 分鐘，控制在 75min 以內。\nMP 段落心率應在 159–166，感覺「努力但可以控制」。',
+  '心率 159–166 bpm');
+a(11,6,'rec','恢復跑｜6k','心率 127–141，配速 6:00–6:20。','心率 127–141 bpm');
+a(11,7,'long','長跑｜25k（後 15k MP）',
+  '前 10k Z2（心率 141–155）\n後 15k MP 配速 5:27/km（心率 159–166）\n後半 15k 全是 MP，是非常有挑戰的長跑！',
+  '前段 141–155｜後段 159–166 bpm');
+a(11,8,'bike','騎車長騎｜2h Z2','Z2 強度。','心率 138–152 bpm');
+a(11,9,'rest','休息','恢復日。','—');
+a(11,10,'bike','騎車 Z2｜75min','維持有氧基礎。','心率 138–152 bpm');
+a(11,11,'z2','輕跑 Z2｜8k','心率 141–155。','心率 141–155 bpm');
+a(11,12,'mp','MP課｜12k 總',
+  '課表：熱身 2k + 8k MP（5:27/km）+ 冷卻 2k\n約 68 分鐘。\n和上週相同，這次應該感覺更有掌控感。',
+  '心率 159–166 bpm');
+a(11,13,'rec','恢復跑｜6k','心率 127–141，配速 6:00–6:20。','心率 127–141 bpm');
+a(11,14,'long','長跑｜26k（後 16k MP）',
+  '前 10k Z2（心率 141–155）\n後 16k MP 配速 5:27/km（心率 159–166）\n又比上週多了 1k，繼續堆積。',
+  '前段 141–155｜後段 159–166 bpm');
+a(11,15,'bike','騎車 輕鬆｜1.5h Z2','輕鬆維持。','心率 135–148 bpm');
+a(11,16,'rest','休息','恢復日。','—');
+a(11,17,'bike','騎車 Z2｜75min','維持有氧基礎。','心率 138–152 bpm');
+a(11,18,'z2','輕跑 Z2｜7k','心率 141–155。','心率 141–155 bpm');
+a(11,19,'mp','MP課｜12k 總',
+  '課表：熱身 2k + 8k MP（5:27/km）+ 冷卻 2k\n約 68 分鐘。這週跑完 MP 課後就是頂峰長跑週，狀態很重要。',
+  '心率 159–166 bpm');
+a(11,20,'rest','休息（頂峰長跑前保留能量）',
+  '明天要跑 28k，今天完全休息！\n• 多補碳水（白飯、麵食）\n• 早點睡，明天 5:00 AM 出發避開太陽\n• 準備好補給（水、鹽錠、凝膠）',
+  '—');
+a(11,21,'long','長跑｜28k（後 18k MP）⭐',
+  '整個訓練計畫最長的一跑！完成後最難的部分就結束了。\n前 10k Z2（心率 141–155）\n後 18k MP 配速 5:27/km（心率 159–166）\n\n補給建議：\n• 每 8–10k 補一次水+鹽錠\n• 20k 後可以吃半包凝膠\n• 後段腿酸是正常的，心率守住 166 不要超',
+  '前段 141–155｜後段 159–166 bpm');
+a(11,22,'bike','騎車 輕鬆｜1.5h Z2','28k 長跑後輕鬆騎，幫助腿部恢復。','心率 130–142 bpm');
+a(11,23,'rest','休息（減量開始）',
+  '從今天起進入減量！讓身體充分恢復迎接比賽。\n不要因為減量感到焦慮，體能不會消失，但疲勞會。信任訓練！',
+  '—');
+a(11,24,'bike','騎車 輕鬆｜60min Z2','輕鬆騎，維持感覺。','心率 132–145 bpm');
+a(11,25,'z2','輕跑 Z2｜6k','心率 141–155，比平時更放鬆。','心率 141–155 bpm');
+a(11,26,'z2','輕跑 Z2｜5k','心率 141–155。','心率 141–155 bpm');
+a(11,27,'rec','恢復跑｜4k','心率 127–141，非常輕鬆。','心率 127–141 bpm');
+a(11,28,'long','長跑 Z2｜14k（減量長跑）',
+  '減量期長跑，心率 141–155，配速放鬆。\n完全不要有跑快的念頭，就是讓腿感維持，讓疲勞持續消散。',
+  '心率 141–155 bpm');
+a(11,29,'bike','騎車 輕鬆｜1h Z2','輕鬆維持。','心率 132–142 bpm');
+a(11,30,'rest','休息','恢復日。','—');
+
+// ══════════════════════════════════════════
+// 12月：比賽準備
+// 12/1=週二
+// ══════════════════════════════════════════
+a(12,1,'bike','騎車 輕鬆｜60min Z2','輕鬆騎，維持腿感。','心率 130–142 bpm');
+a(12,2,'z2','輕跑 Z2｜6k','心率 141–155。','心率 141–155 bpm');
+a(12,3,'z2','輕跑 Z2 含 4×100m 加速跑｜5k',
+  '加速跑讓腿感清晰，不是衝刺！\n只是喚醒肌肉記憶，4 段各 100m，感覺輕快就好。\n今晚開始補碳水（大碗白飯、義大利麵）。',
+  '心率 141–155 bpm');
+a(12,4,'rest','休息＋補碳水',
+  '今天多吃主食（白飯、麵）補充肝醣，準備週日比賽。\n• 不要吃太多油膩食物，以好消化的碳水為主\n• 多喝水，保持水分充足\n• 確認比賽裝備（號碼布、計時晶片、跑鞋、補給）',
+  '—');
+a(12,5,'long','輕鬆跑｜10k（賽前最後慢跑）',
+  '心率≤148，比平時更放鬆，保留腿感。\n包含 4×100m 小加速，讓比賽感覺「清醒」。\n今晚早點睡（9:00 PM），明天 5:00 AM 起床！',
+  '心率 ≤148 bpm');
+a(12,6,'race','🏃 新竹馬拉松 42.195k 🏆',
+  '比賽日！信任 4 個月的積累，放鬆跑！\n\n比賽策略：\n• 前半馬（0–21k）：保守跑 5:30/km，心率守住 159 以下\n• 21–25k：評估狀態，感覺好開始提速\n• 25–35k：切換到 5:25/km，心率 159–166\n• 35k 後：視體力決定，心率守住 166 以下，不要爆\n\n補給建議：\n• 每 8k 取一次水站\n• 20k 和 30k 各吃一包凝膠（比賽前在家練過）\n• 記得補鹽\n\n目標完賽 3:49:xx！',
+  '心率守住 ≤166 bpm');
+
+// ══════════════════════════════════════════
+// Render
+// ══════════════════════════════════════════
+const months = [
+  {year:2026,month:8,name:'8月：恢復重建',sub:'武嶺後恢復 → 旅遊 → 北橫肌耐力 + 跑步堆量',note:'8/1–8/2 武嶺後輕鬆恢復。8/3–8/9 旅遊完全休息，不用補課。8/10 起重啟。北橫只求完賽，爬坡課用 Z3 肌耐力取向（長時間穩定爬坡），省下的力氣灌進跑步：長跑月底拉到 16k，週跑量 40–45k。'},
+  {year:2026,month:9,name:'9月：北橫完賽 → 跑步主導',sub:'9/1–9/17 北橫備賽（Z3 肌耐力）｜9/18 完賽｜9/22 起 Tempo 導入',note:'北橫只求完賽，9 月前半爬坡課全是 Z3 肌耐力（單次拉長到 20–30min）。9/8–9/17 減量。9/18（週四）竹北→宇老→北橫→羅東，穩定配速、安全完賽！9/22 起跑步資源全開，9/25 導入 Tempo，9/27 長跑拉到 18k。'},
+  {year:2026,month:10,name:'10月：強度建立',sub:'週跑量 55–60k｜VO2 間歇 + 長跑加 MP',note:'VO2 間歇每組結束要喘到說話困難（心率 179–186）。長跑後段加入 MP 5:27/km，讓身體習慣比賽配速。騎車維持有氧基礎。'},
+  {year:2026,month:11,name:'11月：專項衝刺',sub:'長跑最高 28k｜週四 MP 課｜11/23 起減量',note:'週四 MP 課控制 75 分鐘內（熱身2k+8k MP+冷卻2k）。11/21 頂峰長跑 28k（前一天休息保留能量）。11/23 起進入減量，信任訓練！'},
+  {year:2026,month:12,name:'12月：比賽準備',sub:'12/6（週日）新竹馬拉松 Sub 3:50',note:'不加任何訓練。信任 4 個月的積累。比賽策略：前半馬 5:30 保守，25k 後再提速 5:25。心率守住 166 以下。'},
+];
+
+const DOW_LABELS = ['一','二','三','四','五','六','日'];
+
+function buildMonth(cfg){
+  const {year,month,name,sub,note} = cfg;
+  const firstDate = new Date(year,month-1,1);
+  const firstDow = firstDate.getDay();
+  const firstCol = (firstDow + 6) % 7;
+  const daysInMonth = new Date(year,month,0).getDate();
+
+  let html = `<div class="month-block">
+    <div class="month-header">
+      <div class="month-title">${name}</div>
+      <div class="month-sub">${sub}</div>
+    </div>
+    <div class="month-note">${note}</div>
+    <div class="cal-grid">
+      <div class="dow-header">${DOW_LABELS.map(d=>`<span>${d}</span>`).join('')}</div>`;
+
+  let day = 1;
+  let col = firstCol;
+  let weekOpen = false;
+
+  while(day <= daysInMonth){
+    if(!weekOpen){
+      html += '<div class="cal-week">';
+      weekOpen = true;
+      if(day===1 && col>0){
+        for(let i=0;i<col;i++) html += '<div class="cal-day empty"></div>';
+      }
+    }
+    const key = `${month}-${day}`;
+    const ev = S[key];
+    if(ev){
+      const t = T[ev.type]||T.rest;
+      const dist = ev.title.match(/\d+\.?\d*k/)?.[0]||'';
+      html += `<div class="cal-day" style="background:${t.bg}" onclick="showModal(${month},${day})">
+        <div class="day-num" style="color:${t.color}">${day}</div>
+        <span class="day-badge" style="background:${t.bg};color:${t.color}">${t.label}</span>
+        ${dist?`<div class="day-dist" style="color:${t.color}">${dist}</div>`:''}
+      </div>`;
+    } else {
+      html += `<div class="cal-day empty"><div class="day-num">${day}</div></div>`;
+    }
+    col++;
+    if(col===7){
+      html += '</div>';
+      weekOpen = false;
+      col = 0;
+    }
+    day++;
+  }
+  if(weekOpen){
+    for(let i=col;i<7;i++) html += '<div class="cal-day empty"></div>';
+    html += '</div>';
+  }
+  html += '</div></div>';
+  return html;
+}
+
+document.getElementById('calendars').innerHTML = months.map(buildMonth).join('');
+
+function showModal(m,d){
+  const ev = S[`${m}-${d}`];
+  if(!ev) return;
+  const t = T[ev.type]||T.rest;
+  const dow = ['日','一','二','三','四','五','六'];
+  const dateObj = new Date(2026,m-1,d);
+  document.getElementById('modalDate').textContent = `2026/${m}/${d}（週${dow[dateObj.getDay()]}）`;
+  document.getElementById('modalTitle').textContent = ev.title;
+  const badge = document.getElementById('modalBadge');
+  badge.textContent = t.label;
+  badge.style.background = t.bg;
+  badge.style.color = t.color;
+  document.getElementById('modalDetail').textContent = ev.detail;
+  document.getElementById('modalHR').textContent = `心率區間：${ev.hr}`;
+  document.getElementById('modalOverlay').classList.add('open');
+}
+
+function closeModal(e){
+  if(!e || e.target===document.getElementById('modalOverlay')){
+    document.getElementById('modalOverlay').classList.remove('open');
+  }
+}
+</script>
+</body>
+</html>
