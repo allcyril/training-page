@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>武嶺訓練課表 6-7月 2026</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Helvetica Neue',sans-serif;background:#f5f5f0;color:#1a1a1a;padding:12px;font-size:14px}
+h1{font-size:17px;font-weight:600;margin-bottom:2px}
+.subtitle{font-size:12px;color:#888;margin-bottom:12px}
+.info-box{background:#fff;border-radius:10px;padding:12px;margin-bottom:12px;border:1px solid #e5e5e0}
+.info-box h2{font-size:12px;font-weight:600;color:#555;margin-bottom:8px}
+.pw-grid{display:grid;grid-template-columns:1fr 1fr;gap:5px}
+.pw-item{padding:7px 9px;border-radius:7px;font-size:10px;line-height:1.5}
+.pw-item b{font-size:12px;display:block}
+.legend{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:12px}
+.leg{font-size:10px;padding:3px 8px;border-radius:20px;font-weight:500}
+.month-block{margin-bottom:20px}
+.month-header{margin-bottom:6px}
+.month-title{font-size:15px;font-weight:600}
+.month-sub{font-size:11px;color:#888;margin-top:2px}
+.month-note{font-size:11px;color:#666;border-left:2px solid #ddd;padding-left:8px;margin:6px 0 8px;line-height:1.5}
+.cal-grid{background:#fff;border-radius:10px;overflow:hidden;border:1px solid #e5e5e0}
+.dow-header{display:grid;grid-template-columns:repeat(7,1fr);background:#f0efe8}
+.dow-header span{font-size:10px;font-weight:600;color:#888;text-align:center;padding:5px 0}
+.cal-week{display:grid;grid-template-columns:repeat(7,1fr);border-top:1px solid #e5e5e0}
+.cal-day{min-height:54px;padding:4px;border-right:0.5px solid #e5e5e0;cursor:pointer}
+.cal-day:last-child{border-right:none}
+.cal-day.empty{background:#fafaf7;cursor:default}
+.day-num{font-size:10px;font-weight:600;color:#999;margin-bottom:2px}
+.day-badge{font-size:9px;padding:2px 4px;border-radius:3px;font-weight:500;line-height:1.3;margin-bottom:1px;display:block}
+.day-dist{font-size:9px;margin-top:1px}
+.modal-overlay{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.5);z-index:100;align-items:flex-end;justify-content:center}
+.modal-overlay.open{display:flex}
+.modal{background:#fff;border-radius:16px 16px 0 0;padding:20px 16px 32px;width:100%;max-width:480px;max-height:80vh;overflow-y:auto}
+.modal-date{font-size:12px;color:#888;margin-bottom:4px}
+.modal-title{font-size:16px;font-weight:600;margin-bottom:8px}
+.modal-badge{display:inline-block;font-size:11px;padding:3px 10px;border-radius:20px;font-weight:500;margin-bottom:10px}
+.modal-detail{font-size:13px;color:#444;line-height:1.7;margin-bottom:12px}
+.modal-hr{font-size:12px;color:#666;background:#f5f5f0;padding:8px 12px;border-radius:8px;line-height:1.6}
+.modal-close{width:100%;padding:12px;background:#f0efe8;border:none;border-radius:10px;font-size:14px;font-weight:500;color:#333;cursor:pointer;margin-top:12px}
+</style>
+</head>
+<body>
+<h1>武嶺訓練課表</h1>
+<p class="subtitle">2026年 6-7月｜7/5 武嶺彩排｜7/15 FTP測試｜7/17-22 ✈出國｜7/31 武嶺｜點日期看詳細</p>
+<div class="info-box">
+  <h2>功率區間（FTP 180W → 目標 189W / 3.0 W/kg）</h2>
+  <div class="pw-grid">
+    <div class="pw-item" style="background:#EAF3DE"><b>100-135W</b>Z2 有氧 輕鬆騎</div>
+    <div class="pw-item" style="background:#E1F5EE"><b>150-175W</b>Tempo 爬坡段</div>
+    <div class="pw-item" style="background:#FAEEDA"><b>158-167W</b>SST 甜蜜點</div>
+    <div class="pw-item" style="background:#FAECE7"><b>171-180W</b>門檻 FTP</div>
+    <div class="pw-item" style="background:#E6F1FB"><b>198-207W</b>VO2max 間歇</div>
+    <div class="pw-item" style="background:#f0f0ff"><b>04:30 補給提醒</b>週二週四出門前吃香蕉</div>
+  </div>
+</div>
+<div class="legend">
+  <span class="leg" style="background:#dce8d4;color:#1a4a10">✅已完成</span>
+  <span class="leg" style="background:#EAF3DE;color:#27500A">Z2騎</span>
+  <span class="leg" style="background:#c8dfc0;color:#0d3a08">長騎(週日)</span>
+  <span class="leg" style="background:#FAEEDA;color:#633806">門檻</span>
+  <span class="leg" style="background:#FAECE7;color:#4A1B0C">VO2</span>
+  <span class="leg" style="background:#fff0cc;color:#7a5000">跑步Z2</span>
+  <span class="leg" style="background:#E6F1FB;color:#042C53">輕鬆騎</span>
+  <span class="leg" style="background:#d6edf5;color:#08567a">🏊游泳</span>
+  <span class="leg" style="background:#f0e8ff;color:#3a1a6a">🎯FTP測試</span>
+  <span class="leg" style="background:#e8e0ff;color:#2a0a6a">武嶺彩排</span>
+  <span class="leg" style="background:#e5e5e5;color:#444">✈出國</span>
+  <span class="leg" style="background:#FCEBEB;color:#501313">🏔武嶺</span>
+  <span class="leg" style="background:#f0efe8;color:#888">休息</span>
+</div>
+<div id="calendars"></div>
+<div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
+  <div class="modal">
+    <p class="modal-date" id="modalDate"></p>
+    <p class="modal-title" id="modalTitle"></p>
+    <span class="modal-badge" id="modalBadge"></span>
+    <p class="modal-detail" id="modalDetail"></p>
+    <div class="modal-hr" id="modalHR"></div>
+    <button class="modal-close" onclick="closeModal()">關閉</button>
+  </div>
+</div>
+<script>
+var T = {
+  rest:   {label:'休息',      bg:'#f0efe8', color:'#888'},
+  swim:   {label:'🏊游泳',   bg:'#d6edf5', color:'#08567a'},
+  done:   {label:'✅已完成',  bg:'#dce8d4', color:'#1a4a10'},
+  z2:     {label:'Z2騎',     bg:'#EAF3DE', color:'#27500A'},
+  long:   {label:'長騎(週日)',bg:'#c8dfc0', color:'#0d3a08'},
+  thresh: {label:'門檻',      bg:'#FAEEDA', color:'#633806'},
+  vo2:    {label:'VO2',      bg:'#FAECE7', color:'#4A1B0C'},
+  run:    {label:'跑步Z2',   bg:'#fff0cc', color:'#7a5000'},
+  easy:   {label:'輕鬆騎',   bg:'#E6F1FB', color:'#042C53'},
+  ftp:    {label:'🎯FTP測試', bg:'#f0e8ff', color:'#3a1a6a'},
+  sim:    {label:'武嶺彩排', bg:'#e8e0ff', color:'#2a0a6a'},
+  abroad: {label:'✈出國',    bg:'#e5e5e5', color:'#444'},
+  race:   {label:'🏔武嶺',   bg:'#FCEBEB', color:'#501313'},
+};
+var S = {};
+function a(m,d,type,title,detail,hr){ S[m+'-'+d]={type:type,title:title,detail:detail,hr:hr}; }
+
+// ── 六月 ──
+a(6,1,'rest','休息','計畫 6/7 啟動，先把身體養好。','—');
+a(6,2,'rest','休息','計畫 6/7 啟動。','—');
+a(6,3,'rest','休息','計畫 6/7 啟動。','—');
+a(6,4,'rest','休息','計畫 6/7 啟動。','—');
+a(6,5,'rest','休息','計畫 6/7 啟動。','—');
+a(6,6,'rest','休息','計畫 6/7 啟動。','—');
+a(6,7,'done','有氧騎乘 45km｜已完成','今日完成 45km 有氧騎乘。課表正式啟動！\n\n6/12 宜蘭羅東長征因天氣取消，改為全力備戰 7/31 武嶺。','—');
+a(6,8,'rest','休息','週日長騎後全休恢復。','—');
+a(6,9,'easy','輕鬆騎 Z2｜60min','Z2 輕鬆，讓身體從週日長騎恢復。\n不需要任何強度，感覺輕快就對了。','100-130W');
+a(6,10,'run','慢跑 Z2｜40-45min','輕鬆能對話的配速，心率控制在 Z2。\n不要跑快，這是有氧基礎日，維持全馬基礎用的。','心率 Z2');
+a(6,11,'thresh','入門門檻｜75min','熱身 15min\n2×5分 @ 155W（休 5min）\n緩和 10min\n\n本週開始輕量強度，讓身體記得爬坡的感覺。\n04:30 補給提醒：出門前吃香蕉！','155W 入門');
+a(6,12,'rest','休息（宜蘭已取消）','宜蘭羅東長征因天氣取消，今日全休。\n把這天的能量留給武嶺。','—');
+a(6,13,'run','慢跑 Z2｜45-50min','輕鬆有氧，能對話。','心率 Z2');
+a(6,14,'long','長騎 週日｜3h','Z2 底（100-135W）\n中間找一段 15-20min 短爬坡 @ ~150W 輕鬆 tempo\n\n第一次週日長騎，找感覺為主，不要太拚。','100-135W Z2 | 爬坡 ~150W');
+a(6,15,'rest','休息','恢復日。','—');
+a(6,16,'thresh','門檻課 建設一｜75min','熱身 15min\n3×10分 @ 158-167W（SST，休 5min）\n緩和 10min\n\n04:30 補給提醒：出門前吃香蕉！','158-167W SST');
+a(6,17,'run','慢跑 Z2｜45-50min','輕鬆有氧跑，能對話。','心率 Z2');
+a(6,18,'vo2','VO2 課 建設一｜75min','熱身 15min\n5×3分 @ 198-207W（休 3min）\n緩和 10min\n\n04:30 補給提醒：出門前吃香蕉！','198-207W');
+a(6,19,'rest','休息（端午節）','端午節假期，完全休息。','—');
+a(6,20,'run','慢跑 Z2｜50min','輕鬆有氧，能對話。','心率 Z2');
+a(6,21,'long','長騎 建設一｜3h','Z2 底（100-135W）\n中間 1 段 20-30min 爬坡 @ 150-175W Tempo\n\n建設一週日主課，開始在長騎裡加入爬坡段。','100-135W Z2 | 爬坡 150-175W');
+a(6,22,'swim','✅ 游泳 回復水感｜兼休息','• 已能較順地游50-100m\n• 6×50m + 2-3×100m，趟間短休\n• 重點仍是省力、不喘到亂節奏\n約700m，輕鬆當休息。','技術 / 恢復');
+a(6,23,'thresh','門檻課 建設二｜75min','熱身 15min\n2×15分 @ 171-180W（門檻，休 8min）\n緩和 10min\n\n04:30 補給提醒：出門前吃香蕉！\n比上週更長的間歇，讓身體適應武嶺持續輸出。','171-180W 門檻');
+a(6,24,'run','慢跑 Z2｜50min','輕鬆有氧跑。','心率 Z2');
+a(6,25,'vo2','Over-Under 建設二｜75min','熱身 15min\nOver-Under 4×6分（2min@170W / 1min@195W，休 4min）\n緩和 10min\n\n04:30 補給提醒：出門前吃香蕉！','Over-Under 170W/195W');
+a(6,26,'swim','游泳 恢復水感｜兼休息日','停游5年+回鍋，重點是找回水感、不是游量。\n• 用 interval 不要硬撐連續：8-10×50m，每趟休20-30秒\n• 水裡用鼻子持續吐氣、抬頭只負責吸（解決一半的喘）\n• 先求身體打平不下沉，再求速度\n總量約500m，輕鬆為主，當休息日。','技術 / 恢復');
+a(6,27,'run','慢跑 Z2｜55min','輕鬆有氧跑，這週稍長一點。','心率 Z2');
+a(6,28,'long','長騎 建設二｜3h','Z2 底（100-135W）\n中間 1 段 30-40min 門檻爬坡 @ 171-180W\n\n這週爬坡段拉到門檻強度，練武嶺的持續配速感覺。','100-135W Z2 | 爬坡 171-180W');
+a(6,29,'swim','游泳 恢復水感｜兼休息日','• 8-10×50m，趟間休20-30秒，動作品質優先\n• 持續吐氣、放慢換氣節奏\n• 穿插1-2趟打水板或側漂，找「髖部浮起來」的感覺\n總量500-600m，輕鬆當休息。','技術 / 恢復');
+a(6,30,'thresh','門檻課 建設三｜75min','熱身 15min\n3×12分 @ 171-180W（休 5min）\n緩和 10min\n\n04:30 補給提醒：出門前吃香蕉！\n這是本計畫強度最高的門檻課。','171-180W 門檻');
+
+// ── 七月 ──
+a(7,1,'run','慢跑 Z2｜50min','輕鬆有氧跑。','心率 Z2');
+a(7,2,'vo2','VO2 課 建設三｜75min','熱身 15min\n4×4分 @ 205W（休 4min）\n緩和 10min\n\n04:30 補給提醒：出門前吃香蕉！\n本計畫最高強度 VO2 課。','205W VO2');
+a(7,3,'swim','游泳 恢復水感｜兼休息日','水感回穩後可以開始拉長單趟：\n• 6-8×75m，或 50m混100m，趟間短休\n• 維持吐氣節奏、身體打平\n總量600-700m，輕鬆，當建設三前的休息日。','技術 / 恢復');
+a(7,4,'easy','輕鬆騎｜60min','Z2 輕鬆，明天最長長騎前的緩衝日。\n保持腿感，不需要強度。','100-120W');
+a(7,5,'sim','武嶺彩排＋宇老PB 週日｜宇老(竹60) 約75-90min全力（建設三峰值 / 賽前26天）','離7/15測試10天、離武嶺26天，恢復夠，放心全力衝PB。開車到尖石/合興，從竹60起點直接開爬。\n\n⚠ 核心：你是快肌/衝刺型，宇老最典型的死法是「前段緩坡太爽超速、後段7.4%崩掉」。整趟策略只有一句——前段壓著、後段才放。\n\n【分段配速｜以FTP180W為錨，主要看RPE、瓦數當護欄】\n■ 段1 尖石大橋→那羅（6.5km 均坡4.3% 約前20min）：陷阱段！160-170W、RPE7，硬性上限172W不准超，迴轉80+。這裡省的力就是後段PB本錢。\n■ 段2 那羅→中段（7.4%持續坡）：進引擎室 172-182W、RPE8，迴轉75+。宇老主體，這段不掉速PB就成立一半。\n■ 段3 最後約9km髮夾彎：開始花存款，持續180W+，遇10-19%陡段surge到195-210W，過彎平緩處回一口。RPE9→10。\n■ 段4 命運交叉口「左轉上」(~1.5km @ ~10%，較緩較長、路寬好會車)：不是200m衝刺，是~6-8分持續收尾！路口別站起來爆，維持180-195W、迴轉70+穩住，最後300-400m才倒乾油箱。\n（左轉比右轉16%緩、適合你快肌型用瓦數穩收，代價是長約1km、慢約5分；頂點會略高於觀景台再小降到終點，別被小起伏弄亂節奏。PB只跟同路線/同Strava段落比。）\n整趟平均約175-180W、壓在75-85min就是硬PB（也反證你FTP其實≥185-190）。\n\n【一兼二顧的驗證】\n■ 齒比：陡段被迫掉到60轉以下硬輾＝PB限速器，也是10-36+30T該上武嶺的鐵證。\n■ 補給：每45min一次，PB高強度下還吞得下電解質/能量正是武嶺要驗的，別因衝PB就不補。\n■ 早出發：下段曝曬熱又有砂石車，清晨涼、車少、安全。','PB配速 段1≤172W→左轉穩收');
+a(7,6,'swim','游泳 超輕恢復｜彩排後','宇老PB隔天——游泳正好是無衝擊的主動恢復，把腿的疲勞洗掉。\n• 純輕鬆 6-8×50m 技術游，趟間充分休\n• 重點是放鬆、活動，不是練量\n若PB真的榨乾、腿很累，改完全休息也OK。','超輕 / 主動恢復');
+a(7,7,'easy','輕鬆騎 Z2｜50-60min','彩排後第2天，輕鬆轉動把腿的疲勞洗掉。\n保持腿感，不需要強度。','100-120W');
+a(7,8,'thresh','維持門檻 SST｜75min','熱身 15min\n3×8分 @ 158-167W SST 甜蜜點（休 4min）\n緩和 10min\n\n04:30 補給提醒：出門前吃香蕉！\n\nFTP測試已移到7/15。這是「維持型」質量課——撐住門檻體能、但不到力竭，因為後面有6天出國完全不騎，現在不能讓引擎太閒。\n⚠ 若7/5宇老PB真的榨到見底、腿還很沉，這課可降強度（改2×8分或踩SST下緣158W）或往後挪一天，別硬上。','158-167W SST');
+a(7,9,'run','慢跑 Z2 40min｜🏁最後一跑','輕鬆有氧跑 40min。\n這是 7/31 武嶺前最後一次跑步，之後停跑專心備戰，也讓 ITBS 徹底休息。\n配速輕鬆，享受就好。','心率 Z2');
+a(7,10,'swim','游泳 恢復水感｜兼休息日','• 6-8×75-100m，趟間短休，維持動作不散\n• 持續吐氣、身體打平\n總量700-800m，輕鬆當休息日，幫週四課後恢復。','技術 / 恢復');
+a(7,11,'thresh','最後爬坡耐力 週六｜2-2.5h','本週期最後一次真正的爬坡質量課（之後是測試→出國→銳化，沒有再建體能的空間了）。\n找一段爬坡，2-2.5h Z2 打底，中間穿插：\n3×10分 @ 155-167W tempo爬坡（休 5min）\n\n強度不到力竭，目的是維持爬坡肌耐力撐過長 taper。距 7/15 測試 4 天，恢復足夠。','155-167W tempo');
+a(7,12,'easy','輕鬆騎 週日｜90min Z2','昨天爬坡後的恢復轉動，純 Z2 輕鬆，不要爬坡段。\n讓腿沉澱，準備 3 天後的 FTP 測試。','100-130W Z2');
+a(7,13,'swim','游泳 輕技術｜兼休息日','測試前2天，游泳低衝擊不影響腿，正好當休息。\n• 純技術純輕鬆：6×50m + 2×100m，充分休\n• 不要累，重點是放鬆＋保持水感\n游完讓腿清爽，準備7/15測試。','輕技術 / 恢復');
+a(7,14,'easy','測前開腿｜50min','熱身 15min\n3×2分 @ 接近門檻 165-175W（休 3min）\n3×15秒 輕鬆加速\n緩和 15min\n\n不是訓練，是把神經肌肉叫醒、為明天測試開腿。量很小，做完腿感覺清爽銳利就對了。','開腿 / 短刺激');
+a(7,15,'ftp','FTP 測試｜75min（正式 / 出國前）','熱身 15min（漸進式，最後幾分鐘接近 170W）\n5min @ ~190W 暖爐衝\n5min 完全恢復（停下來也可以）\n▶ 20分鐘全力！（找穩定爬坡段或室內台）\n緩和 10min\n\nFTP = 20分均功率 × 0.95\n\n■ 快肌型配速提醒：前5分鐘務必壓著踩平均，寧可後段有餘力往上收，別前3分鐘就掏空（你的功率類型最容易這樣低估自己）。\n■ 這數字就是武嶺配速依據，出國6天不會掉，直接拿來用。認真騎！','目標突破 189W');
+a(7,16,'easy','輕鬆騎｜45min（出國前一天）','輕鬆騎 Z2，明天出國，保持身體活躍就好。\n昨天測完，今天純恢復，不要累到。','100-120W');
+a(7,17,'abroad','✈ 出國 Day 1','出國旅行，完全休息。\n這6天完全不騎，剛好是武嶺前9天的大休息——FTP不會掉（要10-14天不練才流失），只是腿感會鈍，回國後再喚醒即可。\n飲食盡量正常，多走路活動。','—');
+a(7,18,'abroad','✈ 出國 Day 2','出國中，休息。','—');
+a(7,19,'abroad','✈ 出國 Day 3','出國中，休息。','—');
+a(7,20,'abroad','✈ 出國 Day 4','出國中，休息。','—');
+a(7,21,'abroad','✈ 出國 Day 5','出國中，休息。','—');
+a(7,22,'abroad','✈ 返國（Day 6）','今天返國。\n旅途疲勞就完全休息，狀態還好可以輕轉 30min。\n不需要勉強，明天才正式啟動。','—');
+a(7,23,'thresh','短刺激｜50min（返國啟動課）','熱身 15min\n3×3分 @ 門檻偏上 (180-190W)（休 3min）\n緩和 10min\n\n6 天沒騎，這課是重新啟動神經肌肉用的短刺激，不是建設課。\n做完感覺腿有回來就對了。','180-190W 短刺激');
+a(7,24,'swim','游泳 恢復水感｜兼休息日','返國銳化週，游泳當低衝擊恢復。\n• 8×50m + 2-3×100m，趟間短休，輕鬆\n• 維持吐氣與身體打平\n總量約700m，幫7/23啟動課後恢復，不要累到。','技術 / 恢復');
+a(7,25,'easy','輕鬆騎｜60min','Z2 輕鬆騎，讓身體穩定下來。\n距離武嶺還有 6 天，保持身體活躍。','100-120W');
+a(7,26,'easy','短騎＋開腿｜40min','輕鬆騎 30min＋3 個 10 秒加速衝刺。\n讓身體感覺活躍，保持神經肌肉敏銳。','輕鬆 + 短加速');
+a(7,27,'swim','游泳 輕鬆鬆動｜兼休息日','武嶺週！游泳只為鬆動放鬆，不練任何東西。\n• 6-8×50m 超輕技術游，充分休\n• 純粹活動筋骨、保持水感\n游完腿要更輕鬆，不是更累。','超輕 / 鬆動');
+a(7,28,'easy','輕轉＋開腿｜40min','輕鬆騎 30min＋3 個 30 秒加速。\n腿感覺清晰有力就對了。','輕鬆 + 短加速');
+a(7,29,'rest','休息（存能量）','完全休息，開始補充肝醣。\n多吃主食：米飯、麵包、香蕉、地瓜。','—');
+a(7,30,'easy','開腿｜30min＋3×10秒衝刺','輕鬆騎 25min＋3 個 10 秒全力衝刺（中間完整休息）。\n今晚早睡、吃夠碳水，準備明天武嶺！','輕鬆 + 短衝刺');
+a(7,31,'race','武嶺挑戰日 3275m','目標：FTP ≥189W（3.0 W/kg）\n\n分段配速策略：\n①地理中心碑→人止關（2.1%）：115-128W，Z2 熱身不超速\n②人止關→霧社（6.4%）：128-140W，建立節奏\n③霧社→清境（5.8%）：132-144W，清境是最後便利商店要補滿！\n④清境→翠峰（7.2%）：140-152W，全程最重要一段，推！\n⑤翠峰→鳶峰（8%）：126-138W，高海拔功率自然掉，接受\n⑥鳶峰→昆陽（7.4%）：113-126W，體感優先不追數字\n⑦昆陽→武嶺天堂路（8.3%）：102-115W，一腳一腳踩完\n\n過 2500m 後改用體感配速，不要恐慌功率掉了。幹大事！','配速 115-152W → 高海拔用體感');
+
+var months = [
+  {year:2026,month:6,name:'6月',
+   sub:'6/7 基礎週 → 6/8-14 入門 → 6/15-21 建設一 → 6/22-28 建設二 → 6/29起建設三',
+   note:'6/7（今日）完成 45km 有氧騎乘，課表正式啟動。週二門檻、週四 VO2、週日長騎為每週三主課，週三週六慢跑維持全馬基礎。6/12 宜蘭羅東長征因雨取消，改為直接進入建設期全力備戰武嶺。'},
+  {year:2026,month:7,name:'7月',
+   sub:'7/5武嶺彩排+宇老PB → 維持質量週 → 7/15 FTP測試 → 7/17-22 ✈出國 → 返國銳化 → 7/31 武嶺',
+   note:'7/5（日）宇老PB＝建設三峰值。因7/17-22出國6天完全不騎已是大休息，這週改「維持質量」（7/8 SST、7/11 最後爬坡），避免雙重休息退化。7/15（三）FTP正式測試，數字出國不會掉、直接當武嶺配速。週一週五游泳恢復水感兼休息。目標 FTP ≥189W。'},
+];
+var DOW_LABELS = ['一','二','三','四','五','六','日'];
+function buildMonth(cfg){
+  var year=cfg.year, month=cfg.month, name=cfg.name, sub=cfg.sub, note=cfg.note;
+  var firstDate = new Date(year,month-1,1);
+  var firstDow = firstDate.getDay();
+  var firstCol = (firstDow + 6) % 7;
+  var daysInMonth = new Date(year,month,0).getDate();
+  var html = '<div class="month-block">';
+  html += '<div class="month-header">';
+  html += '<div class="month-title">'+name+'</div>';
+  html += '<div class="month-sub">'+sub+'</div>';
+  html += '</div>';
+  html += '<div class="month-note">'+note+'</div>';
+  html += '<div class="cal-grid">';
+  html += '<div class="dow-header">';
+  for(var i=0;i<7;i++) html += '<span>'+DOW_LABELS[i]+'</span>';
+  html += '</div>';
+  var day=1, col=firstCol, weekOpen=false;
+  while(day<=daysInMonth){
+    if(!weekOpen){
+      html+='<div class="cal-week">';
+      weekOpen=true;
+      if(day===1&&col>0){
+        for(var j=0;j<col;j++) html+='<div class="cal-day empty"></div>';
+      }
+    }
+    var key=month+'-'+day;
+    var ev=S[key];
+    if(ev){
+      var t=T[ev.type]||T.rest;
+      var dist='';
+      var m2=ev.title.match(/[0-9]+\.?[0-9]*(?:km|h|min)/);
+      if(m2) dist=m2[0];
+      html+='<div class="cal-day" style="background:'+t.bg+'" onclick="showModal('+month+','+day+')">';
+      html+='<div class="day-num" style="color:'+t.color+'">'+day+'</div>';
+      html+='<span class="day-badge" style="background:'+t.bg+';color:'+t.color+'">'+t.label+'</span>';
+      if(dist) html+='<div class="day-dist" style="color:'+t.color+'">'+dist+'</div>';
+      html+='</div>';
+    } else {
+      html+='<div class="cal-day empty"><div class="day-num">'+day+'</div></div>';
+    }
+    col++;
+    if(col===7){html+='</div>';weekOpen=false;col=0;}
+    day++;
+  }
+  if(weekOpen){
+    for(var k=col;k<7;k++) html+='<div class="cal-day empty"></div>';
+    html+='</div>';
+  }
+  html+='</div></div>';
+  return html;
+}
+document.getElementById('calendars').innerHTML=months.map(buildMonth).join('');
+function showModal(m,d){
+  var ev=S[m+'-'+d];
+  if(!ev) return;
+  var t=T[ev.type]||T.rest;
+  var dow=['日','一','二','三','四','五','六'];
+  var dateObj=new Date(2026,m-1,d);
+  document.getElementById('modalDate').textContent='2026/'+m+'/'+d+'（週'+dow[dateObj.getDay()]+'）';
+  document.getElementById('modalTitle').textContent=ev.title;
+  var badge=document.getElementById('modalBadge');
+  badge.textContent=t.label;badge.style.background=t.bg;badge.style.color=t.color;
+  document.getElementById('modalDetail').innerHTML=ev.detail.split('\n').join('<br>');
+  document.getElementById('modalHR').textContent='功率/強度：'+ev.hr;
+  document.getElementById('modalOverlay').classList.add('open');
+}
+function closeModal(e){
+  if(!e||e.target===document.getElementById('modalOverlay'))
+    document.getElementById('modalOverlay').classList.remove('open');
+}
+</script>
+</body>
+</html>
