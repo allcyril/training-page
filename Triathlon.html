@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>下半季課表｜新竹馬恢復 → CT226｜2026/12 – 2027/4</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Helvetica Neue',sans-serif;background:#f5f5f0;color:#1a1a1a;padding:12px;font-size:14px}
+h1{font-size:17px;font-weight:600;margin-bottom:2px}
+.subtitle{font-size:12px;color:#888;margin-bottom:12px;line-height:1.5}
+.hr-box{background:#fff;border-radius:10px;padding:12px;margin-bottom:14px;border:1px solid #e5e5e0}
+.hr-box h2{font-size:12px;font-weight:600;color:#555;margin-bottom:8px}
+.hr-grid{display:grid;grid-template-columns:1fr 1fr;gap:5px}
+.hr-item{padding:7px 9px;border-radius:7px;font-size:10px;line-height:1.5}
+.hr-item b{font-size:12px;display:block}
+.note-box{background:#fff;border-radius:10px;padding:11px 12px;margin-bottom:14px;border:1px solid #e5e5e0;font-size:11px;color:#555;line-height:1.6}
+.note-box b{color:#333}
+.goals-row{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:14px}
+.goal-card{background:#fff;border-radius:10px;padding:11px 12px;border:1px solid #e5e5e0}
+.goal-card .icon{font-size:18px;margin-bottom:4px}
+.goal-card .label{font-size:10px;color:#888;margin-bottom:2px}
+.goal-card .val{font-size:13px;font-weight:600;color:#1a1a1a}
+.goal-card .sub{font-size:10px;color:#999;margin-top:2px}
+.tbl{width:100%;border-collapse:collapse;font-size:11px}
+.tbl th,.tbl td{padding:5px 6px;text-align:left;border-bottom:1px solid #eee}
+.tbl th{color:#888;font-weight:600;font-size:10px}
+.tbl td b{font-weight:600}
+.tbl .delta{color:#0a7a3d;font-weight:600}
+.legend{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:14px}
+.leg{font-size:10px;padding:3px 8px;border-radius:20px;font-weight:500}
+.month-block{margin-bottom:20px}
+.month-header{margin-bottom:6px}
+.month-title{font-size:15px;font-weight:600}
+.month-sub{font-size:11px;color:#888;margin-top:2px}
+.month-note{font-size:11px;color:#666;border-left:2px solid #ddd;padding-left:8px;margin:6px 0 8px;line-height:1.5}
+.cal-grid{background:#fff;border-radius:10px;overflow:hidden;border:1px solid #e5e5e0}
+.dow-header{display:grid;grid-template-columns:repeat(7,1fr);background:#f0efe8}
+.dow-header span{font-size:10px;font-weight:600;color:#888;text-align:center;padding:5px 0}
+.cal-week{display:grid;grid-template-columns:repeat(7,1fr);border-top:1px solid #e5e5e0}
+.cal-day{min-height:56px;padding:4px;border-right:0.5px solid #e5e5e0;cursor:pointer;position:relative}
+.cal-day:last-child{border-right:none}
+.cal-day.empty{background:#fafaf7;cursor:default}
+.day-num{font-size:10px;font-weight:600;color:#999;margin-bottom:2px}
+.day-badge{font-size:9px;padding:2px 4px;border-radius:3px;font-weight:500;line-height:1.3;margin-bottom:1px;display:block}
+.day-dist{font-size:9px;margin-top:1px}
+.star{position:absolute;top:2px;right:3px;font-size:9px}
+.modal-overlay{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.5);z-index:100;align-items:flex-end;justify-content:center}
+.modal-overlay.open{display:flex}
+.modal{background:#fff;border-radius:16px 16px 0 0;padding:20px 16px 32px;width:100%;max-width:480px;max-height:82vh;overflow-y:auto}
+.modal-date{font-size:12px;color:#888;margin-bottom:4px}
+.modal-title{font-size:16px;font-weight:600;margin-bottom:8px}
+.modal-badge{display:inline-block;font-size:11px;padding:3px 10px;border-radius:20px;font-weight:500;margin-bottom:10px}
+.modal-detail{font-size:13px;color:#444;line-height:1.7;margin-bottom:12px;white-space:pre-line}
+.modal-hr{font-size:12px;color:#666;background:#f5f5f0;padding:8px 12px;border-radius:8px;line-height:1.6}
+.modal-close{width:100%;padding:12px;background:#f0efe8;border:none;border-radius:10px;font-size:14px;font-weight:500;color:#333;cursor:pointer;margin-top:12px}
+</style>
+</head>
+<body>
+
+<h1>下半季總課表 <span style="font-size:12px;color:#c0392b">新竹馬恢復 → CT226</span></h1>
+<p class="subtitle">2026/12/1 – 2027/4 下旬｜點任一天看完整課表｜💪週一＝肌力日（不是純休息！）<br>普悠瑪113 3/27＋51.5 3/28 · CT226 4月下旬（暫定4/24）</p>
+
+<div class="goals-row">
+  <div class="goal-card">
+    <div class="icon">🏁</div>
+    <div class="label">B-race 雙日（六＋日）</div>
+    <div class="val">3/27 普悠瑪113＋3/28 51.5</div>
+    <div class="sub">113 全彩排｜51.5 純Z2 雙獎座</div>
+  </div>
+  <div class="goal-card">
+    <div class="icon">🏆</div>
+    <div class="label">總目標（暫定 4/24 六）</div>
+    <div class="val">CT226 台東</div>
+    <div class="sub">Sub-13｜排程目標 12:34</div>
+  </div>
+  <div class="goal-card">
+    <div class="icon">💪</div>
+    <div class="label">肌力線（每週一）</div>
+    <div class="val">膝蓋復健導向</div>
+    <div class="sub">髖外展 · 離心股四頭 · 後鏈</div>
+  </div>
+  <div class="goal-card">
+    <div class="icon">✈️</div>
+    <div class="label">完全恢復（2/5-2/10）</div>
+    <div class="val">春節全家旅遊</div>
+    <div class="sub">無訓練壓力，迎接 Build 2</div>
+  </div>
+</div>
+
+<div class="hr-box">
+  <h2>Sub-13 分段目標（2017 CT 實測 vs 2027 目標｜總緩衝 26min）</h2>
+  <table class="tbl">
+    <tr><th>分段</th><th>2017 實際</th><th>2027 目標</th><th>差</th><th>依據</th></tr>
+    <tr><td>游泳 3.8k</td><td>1:41:43</td><td><b>1:35:00</b></td><td class="delta">-6:43</td><td>2:30/100m｜教練＋技術</td></tr>
+    <tr><td>T1</td><td>19:20</td><td><b>8:00</b></td><td class="delta">-11:20</td><td>流程演練｜免費時間</td></tr>
+    <tr><td>單車 180k</td><td>6:33:16</td><td><b>5:50:00</b></td><td class="delta">-43:16</td><td>FTP216W｜IF0.70≈151W</td></tr>
+    <tr><td>T2</td><td>21:52</td><td><b>6:00</b></td><td class="delta">-15:52</td><td>流程演練｜免費時間</td></tr>
+    <tr><td>路跑 42.2k</td><td>5:21:59</td><td><b>4:55:00</b></td><td class="delta">-26:59</td><td>6:59/km｜新竹馬引擎</td></tr>
+    <tr><td><b>總計</b></td><td><b>14:18:11</b></td><td><b>12:34:00</b></td><td class="delta"><b>-1:44:11</b></td><td>sub-13 留 26min 緩衝</td></tr>
+  </table>
+</div>
+
+<div class="hr-box">
+  <h2>訓練區間（跑 maxHR 190｜騎 FTP 216W｜游泳基準浮力褲 ~2:23/100m）</h2>
+  <div class="hr-grid">
+    <div class="hr-item" style="background:#EAF3DE"><b>141–155 bpm</b>跑 Z2／長跑底（恢復 127–140）</div>
+    <div class="hr-item" style="background:#E6F1FB"><b>MP 5:27/km｜三鐵MP 6:45–7:10</b>Tempo 4:50–4:55／VO2 4:25–4:32</div>
+    <div class="hr-item" style="background:#D6EAF8"><b>125–160W</b>騎 Z2 有氧底</div>
+    <div class="hr-item" style="background:#C2E0F4"><b>145–155W</b>CT226 賽事功率（IF 0.67–0.72）</div>
+    <div class="hr-item" style="background:#FAEEDA"><b>190–203 / 205–227W</b>SST 甜蜜點 / 門檻</div>
+    <div class="hr-item" style="background:#D9F2F7"><b>2:30/100m</b>游泳賽配速（CSS 12/23 實測後校正）</div>
+  </div>
+</div>
+
+<div class="note-box">
+  <b>本表為下半季 CT226 三鐵專項課表。設計原則：</b><br>
+  ① <b>💪週一＝肌力日，不是休息日</b>：跑騎全休，但要做 30–40min 膝蓋復健導向肌力。週期化：<b>12–1月加強期</b>（可加負荷）→ <b>2–3月維持</b> → <b>賽前10天只留髖外展＋小腿</b>。<br>
+  ② <b>三鐵季（12–4月）</b>：游泳升週3（限制因子）、單車守 FTP216 灌賽功率段＋補給演練（60–90g碳水/hr）、Brick 1月起每2週、轉換27min免費時間靠流程。<br>
+  ③ <b>裝備與防護</b>：Zone3浮力褲（活水湖<24°C才可防寒衣）、RC703、<b>胸帶（強度跑必戴）</b>。膝蓋鐵律：踏頻85+、膝外側刺痛＝立刻收。<br>
+  ④ <b>春節全家旅遊（2/5-2/10）</b>：完全不排課表，享受旅遊放鬆身心，利用完整休息帶動超補償。<br>
+  <b>關鍵回報點：</b>12/23 CSS 測驗（定游泳配速）→ 3/27 普悠瑪113 數據（定 CT226 最終配速）。
+</div>
+
+<div class="legend">
+  <span class="leg" style="background:#EDE7F6;color:#3a2a6a">💪肌力</span>
+  <span class="leg" style="background:#EAF3DE;color:#27500A">Z2跑</span>
+  <span class="leg" style="background:#dce8d4;color:#1a4a10">長跑</span>
+  <span class="leg" style="background:#E1F5EE;color:#0a5c3e">恢復跑</span>
+  <span class="leg" style="background:#FAECE7;color:#4A1B0C">Tempo</span>
+  <span class="leg" style="background:#D6EAF8;color:#0A3D5C">騎Z2</span>
+  <span class="leg" style="background:#C2E0F4;color:#07325A">長騎/賽功率</span>
+  <span class="leg" style="background:#FAEEDA;color:#633806">騎質量</span>
+  <span class="leg" style="background:#D9F2F7;color:#0A5566">🏊游泳</span>
+  <span class="leg" style="background:#FFE8D9;color:#7a3a00">🔗Brick</span>
+  <span class="leg" style="background:#FCEBEB;color:#501313">比賽</span>
+  <span class="leg" style="background:#f5e6ff;color:#4a0066">旅遊/春節</span>
+  <span class="leg" style="background:#f0efe8;color:#888">休息</span>
+</div>
+
+<div id="calendars"></div>
+
+<div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
+  <div class="modal">
+    <p class="modal-date" id="modalDate"></p>
+    <p class="modal-title" id="modalTitle"></p>
+    <span class="modal-badge" id="modalBadge"></span>
+    <p class="modal-detail" id="modalDetail"></p>
+    <div class="modal-hr" id="modalHR"></div>
+    <button class="modal-close" onclick="closeModal()">關閉</button>
+  </div>
+</div>
+
+<script>
+const T = {
+  rest:   {label:'休息',    bg:'#f0efe8', color:'#888'},
+  str:    {label:'💪肌力',  bg:'#EDE7F6', color:'#3a2a6a'},
+  bike:   {label:'騎Z2',   bg:'#D6EAF8', color:'#0A3D5C'},
+  climb:  {label:'騎爬坡', bg:'#C2E0F4', color:'#07325A'},
+  bq:     {label:'騎質量', bg:'#FAEEDA', color:'#633806'},
+  lb:     {label:'長騎',   bg:'#C2E0F4', color:'#07325A'},
+  swim:   {label:'🏊游泳', bg:'#D9F2F7', color:'#0A5566'},
+  z2:     {label:'Z2跑',   bg:'#EAF3DE', color:'#27500A'},
+  long:   {label:'長跑',   bg:'#dce8d4', color:'#1a4a10'},
+  rec:    {label:'恢復跑', bg:'#E1F5EE', color:'#0a5c3e'},
+  tempo:  {label:'Tempo',  bg:'#FAECE7', color:'#4A1B0C'},
+  mp:     {label:'MP課',   bg:'#E6F1FB', color:'#042C53'},
+  brick:  {label:'🔗Brick',bg:'#FFE8D9', color:'#7a3a00'},
+  race:   {label:'比賽',   bg:'#FCEBEB', color:'#501313'},
+  travel: {label:'旅遊', bg:'#f5e6ff', color:'#4a0066'},
+};
+
+const S = {};
+function a(y,m,d,type,title,detail,hr,star){S[`${y}-${m}-${d}`]={type,title,detail,hr,star:!!star};}
+
+const PREHAB = '\n【💪肌力課表 30–40min（膝蓋復健導向｜跑騎全休日執行）】\n① 髖外展：彈力帶蚌殼式 3×15、側抬腿 3×15、側向彈力帶走路 2×20步\n② 離心股四頭：慢速下階梯 3×10／腿（3–4秒下）、西班牙深蹲 3×30–45秒\n③ 後鏈：單腿 RDL 3×10／腿、單腿臀橋 3×12、北歐腿彎舉（離心）2×6\n④ 小腿：直膝＋屈膝提踵 各 2×15\n【原則】隔天腿不能痠到影響主課；痠就降組數。';
+
+// 12月份 (馬拉松+過渡)
+a(2026,12,1,'bike','騎車 Z2 輕鬆｜50min','【執行】輕鬆騎維持腿感。','心率 130–142 bpm');
+a(2026,12,2,'z2','輕跑 Z2＋strides｜6k','【執行】Z2 6k＋4×100m strides。心率 141–155。','心率 141–155 bpm');
+a(2026,12,3,'z2','輕跑 含 4×100m｜5k','【執行】Z2 為主＋4×100m 喚醒肌肉記憶（非衝刺）。今晚開始補碳水。','心率 141–155 bpm');
+a(2026,12,4,'rest','休息＋補碳水','今天多吃主食補肝醣。少油膩、多喝水。確認裝備（號碼布、晶片、跑鞋、凝膠、鹽錠）。','—');
+a(2026,12,5,'z2','賽前慢跑｜6k 含 4×100m','【執行】心率 ≤148，比平時放鬆，保留腿感，含 4×100m 小加速。今晚 9:00 睡，明天 5:00 起。','心率 ≤148 bpm');
+a(2026,12,6,'race','🏃 新竹馬拉松 42.195k（Sub 3:50）','【主目標賽】信任積累，放鬆跑。\n【配速（sub-3:50 = 5:27/km）】0–21k 保守 5:30、心率守 ≤163、刻意壓住別 front-load；21–25k 評估後提速；25–35k 切 5:25、心率 155–166；35k 後守 166 以下、看體力收尾不爆。\n（11/8 半馬若很輕鬆，可全程鎖 5:20 拚 sub-3:45。）\n【補給】每 8k 一次水站；20k、30k 各一包凝膠；記得補鹽。\n目標 3:49:xx！','心率守住 ≤166 bpm',true);
+a(2026,12,7,'rest','全馬隔日｜完全休息','【目的】全馬後 48–72h 是肌肉微創傷最高峰。\n【執行】完全休息，補碳水＋蛋白質、多睡。下樓梯慢慢走。\n不要「感覺還好」就動——延遲性痠痛第二天才到頂。','—');
+a(2026,12,8,'rest','恢復期 Day 2','散步 20–30min 即可，促進循環。持續補水補蛋白。','—');
+a(2026,12,9,'swim','恢復游｜20min','【執行】800–1000m 純放鬆技術游，零衝擊把腿沖開。\n游泳是全馬後最友善的第一個運動。','心率低、非常輕鬆');
+a(2026,12,10,'rest','休息','休息或散步 30min。','—');
+a(2026,12,11,'swim','恢復游｜30min','【執行】1200m 技術游（抓水、身體位置），當作 CT226 游泳量化的暖身週。','心率低、輕鬆');
+a(2026,12,12,'bike','騎車 Z2｜60min','【執行】平路輕鬆轉，腿感回穩，不爬坡不看均速。','125–150W｜HR 130–145');
+a(2026,12,13,'str','💪肌力＋prehab（重啟）','全馬後第一個週日，全休＋重啟 prehab。'+PREHAB,'—');
+a(2026,12,14,'str','💪肌力＋prehab','過渡週開始。週一全休＋prehab 的節奏從馬拉松計畫原封延續。'+PREHAB,'—');
+a(2026,12,15,'bike','騎車 Z2｜75min','【執行】Z2 有氧，可加 1–2 段輕起伏試腿，不做強度。','130–160W｜HR 135–150');
+a(2026,12,16,'swim','游泳 技術｜40min','【執行】1500m：技術組合（抓水 drill＋6×50m 節奏）。\n8月教練教的動作在這裡開始「加量鞏固」。','技術優先');
+a(2026,12,17,'rec','馬後第一跑｜5k','【執行】心率 127–140、配速無所謂。\n【ITBS】膝外側任何緊繃→立刻改走。第一跑只是確認腿回來了。','心率 127–140 bpm');
+a(2026,12,18,'swim','游泳 技術｜40min','【執行】1500m 技術＋4×100m 找配速感。','技術優先');
+a(2026,12,19,'lb','騎車 Z2｜90min','【執行】Z2 有氧 90min，重新累積坐墊時間。','130–160W｜HR 135–150');
+a(2026,12,20,'z2','輕跑 Z2｜8k','【執行】心率 141–155，輕鬆。跑感回歸即可。','心率 141–155 bpm');
+a(2026,12,21,'str','💪肌力＋prehab（Base 期啟動）','過渡結束，明天起準備進入 CT226 專項期。'+PREHAB,'—');
+a(2026,12,22,'bq','騎質量 SST-lite｜75min','【執行】熱身 15min＋2×10min @ 190–200W（SST 下緣，休 5min）＋緩和。\n馬拉松季騎車只有 Z2，這是引擎重啟第一堂，保守進。','190–200W SST 下緣');
+a(2026,12,23,'swim','游泳 CSS 基準測｜50min','【執行】充分熱身後：400m 計時＋休＋200m 計時 → CSS =（400T−200T）/2 per 100m。\n這個數字定接下來所有游泳間歇配速，認真游、回報給 Claude 校正課表。','CSS 基準測 ★');
+a(2026,12,24,'z2','輕跑 Z2＋strides｜8k','【執行】Z2 8k＋4×100m strides。平安夜，早點收工。','心率 141–155 bpm');
+a(2026,12,25,'swim','游泳 或 家庭日彈性｜40min','聖誕節。有空就 1500m 技術游，沒空全休完全 OK——Base 第一週彈性最大。','技術 / 彈性');
+a(2026,12,26,'lb','長騎 Z2｜2h','【執行】Z2 有氧（135–160W），重新習慣 2h 坐墊時間。\n【補給】開始演練每 45min 一次的節奏。','135–160W｜HR 135–152');
+a(2026,12,27,'long','長跑 Z2｜10k','【執行】心率 141–155。馬後長跑從 10k 重新起步，平滑進程。','心率 141–155 bpm');
+a(2026,12,28,'str','💪肌力＋prehab','Base 第二週。'+PREHAB,'—');
+a(2026,12,29,'bq','騎質量 SST｜75min','【執行】熱身＋3×10min @ 190–203W（休 5min）＋緩和。','190–203W SST');
+a(2026,12,30,'swim','游泳 CSS 間歇｜50min','【執行】1800m：主組 8×100m @ CSS（休 15–20s）＋技術收尾。','CSS 配速');
+a(2026,12,31,'z2','輕跑 Z2｜8k（跨年）','【執行】Z2 8k。跨年夜想守歲就把課移到早上，睡眠 > 課表。','心率 141–155 bpm');
+
+// 1月份
+a(2027,1,1,'swim','元旦｜游泳 或 全家日','有空 1500m 技術游；全家出遊就當休息日，明天長騎才是主課。','技術 / 彈性');
+a(2027,1,2,'lb','長騎 Z2＋賽功率體感｜2.5h','【執行】Z2 底＋2×20min @ 145–155W（CT226 賽事功率）。\n【目的】開始讓身體記住「一整天都要用的那個瓦數」是什麼感覺——它應該覺得太輕鬆，這是對的。','Z2＋段 145–155W');
+a(2027,1,3,'long','長跑 Z2｜12k','【執行】心率 141–155，每 25min 補水。','心率 141–155 bpm');
+a(2027,1,4,'str','💪肌力＋prehab','週一全休。'+PREHAB,'—');
+a(2027,1,5,'bq','騎質量 門檻｜75min','【執行】熱身＋2×15min @ 200–210W（休 8min）＋緩和。','200–210W 門檻');
+a(2027,1,6,'swim','游泳 CSS｜50min','【執行】2000m：10×100m @ CSS（休 15s）＋技術。','CSS 配速');
+a(2027,1,7,'tempo','跑 Tempo-lite｜8k 總','【執行】熱身 2k＋3×1.5k @ 4:55–5:00（90s 慢跑休）＋冷卻。\n【目的】維持馬拉松季建好的引擎，量比 10–11 月小一階。','心率 166–175 bpm');
+a(2027,1,8,'swim','游泳 技術｜40min','【執行】1500m 技術游，輕鬆。','技術優先');
+a(2027,1,9,'lb','長騎｜3h','【執行】Z2 底＋3×20min @ 145–155W。\n【補給】正式演練 60–90g 碳水/hr＋電解質，記錄腸胃感受。','Z2＋段 145–155W');
+a(2027,1,10,'long','長跑 Z2｜14k','【執行】心率 141–155。','心率 141–155 bpm');
+a(2027,1,11,'str','💪肌力＋prehab','週一全休。'+PREHAB,'—');
+a(2027,1,12,'bq','騎質量 SST｜75min','【執行】熱身＋3×12min @ 190–203W（休 5min）＋緩和。','190–203W SST');
+a(2027,1,13,'swim','游泳 CSS｜55min','【執行】2200m：5×200m @ CSS＋10s（休 25s）＋技術。單趟拉長。','CSS＋10s/100m');
+a(2027,1,14,'z2','輕跑 Z2＋strides｜8k','【執行】Z2 8k＋4×100m strides。','心率 141–155 bpm');
+a(2027,1,15,'swim','游泳 技術｜40min','【執行】1500m 輕鬆，明天首次 Brick 前不累。','技術優先');
+a(2027,1,16,'brick','🔗 Brick #1｜騎2h＋跑15min','【騎】Z2 底＋40min @ 145–155W。\n【T1 演練】計時！車鞋→跑鞋、安全帽、號碼帶，目標流程 <5min（含喘）。\n【跑】15min @ 7:00–7:15/km，配速不重要，感受轉換腿＋心肺。\n【提醒】7/12 那次已證明你轉換腿很好、心肺是限制——所以跑段專注呼吸節奏。','騎145–155W＋跑7:00–7:15');
+a(2027,1,17,'long','長跑 Z2｜12k（Brick 隔日減量）','【執行】心率 141–155，比平常放鬆。腿沉就縮到 10k。','心率 141–155 bpm');
+a(2027,1,18,'str','💪肌力＋prehab','週一全休。'+PREHAB,'—');
+a(2027,1,19,'bq','騎質量 門檻｜75min','【執行】熱身＋2×20min @ 200–208W（休 8min）＋緩和。\n本 Base 期最硬一堂騎課。','200–208W 門檻');
+a(2027,1,20,'swim','游泳 CSS｜55min','【執行】2200m：3×（4×100m @ CSS）組間 1min。','CSS 配速');
+a(2027,1,21,'tempo','跑 Tempo｜9k 總','【執行】熱身 2k＋3×2k @ 4:55（2min 慢跑休）＋冷卻。','心率 166–175 bpm');
+a(2027,1,22,'swim','游泳 技術｜40min','【執行】1500m 技術。','技術優先');
+a(2027,1,23,'lb','長騎｜3.5h','【執行】Z2 底＋3×25min @ 148–155W。\n【補給】60–90g/hr 全程執行，這是 CT226 成敗一半的功課。','Z2＋段 148–155W');
+a(2027,1,24,'long','長跑｜16k（後 3k 三鐵MP）','【執行】前 13k Z2＋後 3k @ 6:45–7:00（模擬騎後配速的「刻意慢」）。\n三鐵跑最難的是「壓住不跑快」，從現在開始練。','前 141–155｜後段 6:45–7:00/km');
+a(2027,1,25,'str','💪肌力＋prehab（減量週）','本週減量約 70%，吸收前四週。'+PREHAB,'—');
+a(2027,1,26,'bike','騎車 Z2｜60min（減量）','【執行】輕鬆 Z2。','130–155W');
+a(2027,1,27,'swim','游泳 技術｜40min（減量）','【執行】1500m 輕鬆技術，不做主組。','技術優先');
+a(2027,1,28,'z2','輕跑 Z2｜6k（減量）','【執行】心率 141–155，輕鬆。','心率 141–155 bpm');
+a(2027,1,29,'swim','游泳｜30min（減量）','【執行】1200m 純放鬆。','輕鬆');
+a(2027,1,30,'lb','騎車 Z2｜2h（減量）','【執行】純 Z2，不加賽功率段。','135–160W');
+a(2027,1,31,'rec','恢復跑｜8k','【執行】心率 127–140，非常輕鬆收掉一月。','心率 127–140 bpm');
+
+// 2月份
+a(2027,2,1,'str','💪肌力＋prehab','Build 1 開始。'+PREHAB,'—');
+a(2027,2,2,'bq','騎質量 門檻｜75min','【執行】熱身＋2×20min @ 203–210W（休 8min）＋緩和。','203–210W 門檻');
+a(2027,2,3,'swim','游泳 CSS｜55min','【執行】2400m：4×300m @ CSS＋12s（休 30s）＋技術。','CSS＋12s/100m');
+a(2027,2,4,'tempo','跑 Tempo｜10k 總','【執行】熱身 2k＋4×1.5k @ 4:50–4:55＋冷卻。','心率 166–175 bpm');
+a(2027,2,5,'travel','旅遊｜除夕','全家旅遊，完全休息，把時間留給家人。不用想訓練。','—');
+a(2027,2,6,'travel','旅遊｜初一','全家旅遊，完全休息，享受假期。','—');
+a(2027,2,7,'travel','旅遊｜初二','全家旅遊，完全休息，吃好睡好。','—');
+a(2027,2,8,'travel','旅遊｜初三','全家旅遊，完全休息。','—');
+a(2027,2,9,'travel','旅遊｜初四','全家旅遊，完全休息。','—');
+a(2027,2,10,'travel','旅遊｜初五','全家旅遊，假期最後一天，準備明天回歸。','—');
+a(2027,2,11,'z2','輕跑 Z2＋strides｜8k','【執行】旅遊後回歸。Z2 8k＋4×100m strides。','心率 141–155 bpm');
+a(2027,2,12,'swim','游泳 技術｜40min','【執行】1500m 輕鬆找水感，準備明天的 Brick。','技術優先');
+a(2027,2,13,'brick','🔗 Brick #2｜騎2.5h＋跑20min','【騎】Z2 底＋2×30min @ 148–155W。\n【T1】計時，目標比 #1 快。\n【跑】20min @ 6:45–7:00/km，專注呼吸節奏（心肺限制的專項）。\n【補給】騎段完整執行 60–90g/hr。','騎148–155W＋跑6:45–7:00');
+a(2027,2,14,'long','長跑 Z2｜16k','【執行】心率 141–155，Brick 隔日放鬆跑。','心率 141–155 bpm');
+a(2027,2,15,'str','💪肌力＋prehab','週一全休。'+PREHAB,'—');
+a(2027,2,16,'bq','騎質量 SST｜75min','【執行】熱身＋3×12min @ 195–205W＋緩和。','195–205W SST');
+a(2027,2,17,'swim','游泳 CSS｜55min','【執行】2400m：10×100m @ CSS＋2×200m。','CSS 配速');
+a(2027,2,18,'tempo','跑 Tempo｜10k 總','【執行】熱身 2k＋3×2k @ 4:50–4:55＋冷卻。','心率 166–175 bpm');
+a(2027,2,19,'swim','游泳 技術｜45min','【執行】1800m 技術＋輕鬆量。','技術優先');
+a(2027,2,20,'lb','長騎｜4h ⭐','【執行】Z2 底＋3×30min @ 148–153W。\n【補給】全程 60–90g/hr＋電解質，模擬比賽日早餐時間與內容。\n【姿勢】休息把時間逐段拉長，練「趴得住」。','Z2＋段 148–153W',true);
+a(2027,2,21,'long','長跑｜18k（後 4k 三鐵MP）','【執行】前 14k Z2＋後 4k @ 6:30–6:45。\n【ITBS】長騎隔日跑，膝外側訊號特別注意。','前 141–155｜後 6:30–6:45/km');
+a(2027,2,22,'str','💪肌力＋prehab（減量週）','減量約 70%，吸收 Build 1。'+PREHAB,'—');
+a(2027,2,23,'bike','騎車 Z2｜60min（減量）','【執行】輕鬆。','130–155W');
+a(2027,2,24,'swim','游泳｜40min（減量）','【執行】1500m 技術輕鬆。','技術優先');
+a(2027,2,25,'z2','輕跑 Z2｜6k（減量）','【執行】輕鬆。','心率 141–155 bpm');
+a(2027,2,26,'swim','游泳｜30min（減量）','【執行】1200m 放鬆。','輕鬆');
+a(2027,2,27,'lb','騎車 Z2｜2h（減量）','【執行】純 Z2。','135–160W');
+a(2027,2,28,'rec','恢復跑｜8k','【執行】心率 127–140。','心率 127–140 bpm');
+
+// 3月份
+a(2027,3,1,'str','💪肌力＋prehab','Build 2＝賽前最大量的兩週開始。'+PREHAB,'—');
+a(2027,3,2,'bq','騎質量 門檻｜75min','【執行】熱身＋2×20min @ 205–212W＋緩和。本週期最硬騎課。','205–212W 門檻');
+a(2027,3,3,'swim','游泳 CSS＋開放水域技巧｜60min','【執行】2600m：CSS 主組＋開放水域技巧（抬頭定位每 6–8 划一次、集團出發模擬、轉身踩水）。\n活水湖是分圈湖道，定位比海泳簡單，但抬頭節奏要練熟。','CSS＋OW 技巧');
+a(2027,3,4,'tempo','跑 Tempo｜10k 總','【執行】熱身 2k＋4×1.5k @ 4:50–4:55＋冷卻。','心率 166–175 bpm');
+a(2027,3,5,'swim','游泳 技術｜45min','【執行】1800m 輕鬆，明天大 Brick。','技術優先');
+a(2027,3,6,'brick','🔗 Brick #3（大）｜騎4.5h＋跑30min ⭐','【全計畫最接近 CT226 的一天】\n【騎】Z2 底＋3×40min @ 148–153W，完整補給（60–90g/hr）、休息把姿勢。\n【T1】全速流程計時。\n【跑】30min @ 6:45–7:00/km，前 10min 刻意壓 7:10 再回穩——練比賽日 0–10k 的自制。\n【檢核】記錄：騎段脫鉤、跑段心肺感受、腸胃狀態，回報 Claude。','騎148–153W＋跑6:45–7:00',true);
+a(2027,3,7,'bike','恢復轉｜90min Z2','【執行】大 Brick 隔日，純 Z2 把腿沖開，不跑。','130–155W');
+a(2027,3,8,'str','💪肌力＋prehab','週一全休。'+PREHAB,'—');
+a(2027,3,9,'bq','騎質量 SST｜75min','【執行】熱身＋3×12min @ 195–205W＋緩和。','195–205W SST');
+a(2027,3,10,'swim','游泳 長游模擬｜60min ⭐','【執行】3000m 連續（或 3×1000m 極短休），配速 CSS＋8–12s，模擬賽事游泳的「長且穩」。\n全程專注技術不散掉——游泳段的目標是省力上岸，不是快。','賽距模擬 3k',true);
+a(2027,3,11,'tempo','跑 Tempo｜8k 總','【執行】熱身 2k＋2×2k @ 4:55＋冷卻，量略降（週日長跑峰值前）。','心率 166–175 bpm');
+a(2027,3,12,'swim','游泳 技術｜40min','【執行】1500m 輕鬆。','技術優先');
+a(2027,3,13,'lb','長騎｜4h','【執行】Z2 底＋2×40min @ 148–153W，補給全套。','Z2＋段 148–153W');
+a(2027,3,14,'long','長跑峰值｜20k（後 5k 三鐵MP）⭐','【全計畫最長一跑】\n【執行】前 15k Z2＋後 5k @ 6:30–6:45。每 8k 補水＋鹽錠。\n【ITBS】膝外側刺痛＝停，下週開始降量反正練不到了。','前 141–155｜後 6:30–6:45/km',true);
+a(2027,3,15,'str','💪肌力＋prehab（普悠瑪 taper 開始）','量開始下降，強度短暫保留。體能不會掉、疲勞會散——taper 焦慮是正常的。'+PREHAB,'—');
+a(2027,3,16,'bike','騎車 Z2｜75min','【執行】Z2 輕鬆。','130–160W');
+a(2027,3,17,'swim','游泳 賽配速段｜50min','【執行】2000m：6×100m @ 2:30/100m（賽配速體感）＋技術。','2:30/100m');
+a(2027,3,18,'z2','輕跑 Z2＋strides｜8k','【執行】Z2 8k＋4×100m。','心率 141–155 bpm');
+a(2027,3,19,'swim','游泳 技術｜40min','【執行】1500m 輕鬆，明天全裝彩排。','技術優先');
+a(2027,3,20,'brick','🔗 Brick #4（全裝彩排）｜騎2.5h＋跑25min','【裝備全套上陣】浮力褲→車衣流程、號碼帶、RC703、補給袋配置——完全比照 3/27。\n【騎】Z2＋60min @ 150–155W。\n【T1/T2】兩個轉換都全速計時，找出卡點。\n【跑】25min @ 6:45/km。\n彩排的目的是讓 3/27 沒有任何「第一次」。','全裝計時彩排');
+a(2027,3,21,'rec','恢復跑｜6k 或全休','【執行】心率 127–140 或直接休息，看腿。','心率 127–140 bpm');
+a(2027,3,22,'str','💪肌力＋prehab（普悠瑪週）','賽週。睡眠開始存款。'+PREHAB,'—');
+a(2027,3,23,'bike','騎車 Z2｜60min','【執行】輕鬆維持腿感。','130–155W');
+a(2027,3,24,'swim','游泳 輕技術＋出發演練｜30min','【執行】1000m：輕鬆技術＋4×25m 出發加速（模擬下水前段）。','輕鬆＋短加速');
+a(2027,3,25,'z2','輕跑｜5k 含 3×100m','【執行】Z2 輕鬆＋3×100m 喚醒。今晚開始補碳水。','心率 141–155 bpm');
+a(2027,3,26,'travel','赴台東｜賽前一天','【裝備檢查表】兩個轉換袋、膠＋鹽錠、浮力褲、胸帶、RC703、號碼帶、備胎工具、防曬。\n【到台東後】報到、寄物、賽前說明會；可試水活水湖 10–15min 感受水溫。\n晚餐熟悉的碳水、9 點睡。','—');
+a(2027,3,27,'race','🏁 普悠瑪 113｜B-race 全彩排','【定位】CT226 的 dress rehearsal——成績是參考，「執行品質」才是 KPI。\n【游 1.9k】@ 2:30/100m 體感，出發不衝、找腳泡跟游。驗證：浮力褲、定位節奏。\n【T1】全速流程，目標 <6min。\n【騎 90k】IF 0.75–0.78（~162–168W），比 226 略高但不榨。驗證：補給 60–90g/hr、休息把耐受。\n【T2】目標 <5min。\n【跑 21.1k】前 5k 壓 7:00–7:10，之後 6:30–6:45 視心肺。驗證：騎後配速自制力。\n【賽後】完整回報分段＋數據給 Claude → 4/1 據此修 CT226 配速。','游2:30/騎~165W/跑6:30-6:45',true);
+a(2027,3,28,'race','🏁 普悠瑪 51.5｜挑戰組 陪騎日','【定位】純 Z2 陪友輕鬆完賽、拿兩日雙水晶獎座。\n【鐵律】昨天剛拚完 113——今天心率全程 Z2 以下、絕不追速、膝蓋優先。\n把它當「主動恢復＋享受比賽氣氛」的一天，成績無意義。','全程 Z2｜膝蓋優先',true);
+a(2027,3,29,'rest','賽後完全休息','雙日賽後全休。補碳水蛋白質、多睡、慶祝。','—');
+a(2027,3,30,'swim','恢復游｜30min','【執行】1000m 非常輕鬆，把腿沖開。','輕鬆');
+a(2027,3,31,'bike','恢復騎 Z2｜60min','【執行】輕鬆轉。','125–150W');
+
+// 4月份
+a(2027,4,1,'str','💪肌力＋檢討日','【功課】把 3/27 的分段時間、功率、心率、補給紀錄整理好回報 Claude——據此微調 CT226 配速（游泳配速、騎 IF、跑前 10k 壓多慢）。\n數據比感覺誠實。'+PREHAB,'—');
+a(2027,4,2,'swim','游泳 技術｜45min','【執行】1800m 技術＋輕量。','技術優先');
+a(2027,4,3,'lb','長騎｜3.5h','【執行】Z2 底＋2×30min @ 148–153W。賽後第一次長課，體感為主。','Z2＋段 148–153W');
+a(2027,4,4,'long','長跑 Z2｜16k','【執行】心率 141–155，輕鬆。','心率 141–155 bpm');
+a(2027,4,5,'str','💪肌力＋prehab','週一全休。'+PREHAB,'—');
+a(2027,4,6,'bq','騎質量 門檻｜75min','【執行】熱身＋2×15min @ 205W＋緩和。最後一堂門檻課。','205W 門檻');
+a(2027,4,7,'swim','游泳 CSS｜55min','【執行】2200m：CSS 主組＋技術。','CSS 配速');
+a(2027,4,8,'tempo','跑 Tempo｜8k 總','【執行】熱身 2k＋2×2k @ 4:55＋冷卻。最後一堂 Tempo。','心率 166–175 bpm');
+a(2027,4,9,'swim','游泳 技術｜45min','【執行】1800m 輕鬆，明天最後大課。','技術優先');
+a(2027,4,10,'brick','🔗 Brick #5（最後大課）｜騎4h＋跑40min ⭐','【過了今天，最難的就結束了】\n【騎】Z2 底＋3×40min @ 148–153W，補給全套最後演練。\n【跑】40min @ 6:45–7:00/km，前 10min 壓 7:10。\n之後只剩 taper——今天之後任何「多練一點」都是扣分不是加分。','騎148–153W＋跑6:45–7:00',true);
+a(2027,4,11,'rec','恢復跑｜8k','【執行】心率 127–140，大課隔日放鬆。','心率 127–140 bpm');
+a(2027,4,12,'str','💪肌力＋prehab（taper 第一週 ~70%）','減量開始。信任 4 個月的積累。'+PREHAB,'—');
+a(2027,4,13,'bq','騎質量 SST-lite｜60min','【執行】熱身＋2×10min @ 195W＋緩和。維持刺激不累積疲勞。','195W SST');
+a(2027,4,14,'swim','游泳 賽配速段｜45min','【執行】1800m：4×100m @ 2:30＋技術。','2:30/100m');
+a(2027,4,15,'z2','輕跑 Z2＋strides｜8k','【執行】Z2 8k＋4×100m。','心率 141–155 bpm');
+a(2027,4,16,'swim','游泳 技術｜35min','【執行】1400m 輕鬆。','技術優先');
+a(2027,4,17,'lb','騎車｜2h Z2 含 20min 賽功率','【執行】Z2＋20min @ 150W，最後一次中長騎。','Z2＋150W 段');
+a(2027,4,18,'long','長跑 Z2｜12k（最後兩位數）','【執行】心率 141–155，放鬆。之後跑量只剩喚醒用。','心率 141–155 bpm');
+a(2027,4,19,'str','💪肌力＋prehab（賽週 ~50%）','賽週開始。睡眠、碳水、心態——課表已經不重要了。'+PREHAB,'—');
+a(2027,4,20,'bike','賽週輕騎｜45min','【執行】Z2＋3×1min @ 賽功率略上（160W），保持神經敏銳。','Z2＋短段 160W');
+a(2027,4,21,'swim','游泳 輕鬆＋出發加速｜30min','【執行】1000m 輕鬆＋4×25m 出發加速。','輕鬆＋短加速');
+a(2027,4,22,'rec','恢復跑｜5k 含 3×100m','【執行】非常輕鬆＋3×100m。今天開始正式補碳水。\n【打包】兩轉換袋、膠鹽錠、浮力褲、胸帶、RC703、備胎工具、號碼帶。','心率 ≤140 bpm');
+a(2027,4,23,'travel','赴台東｜賽前一天','【到達後】報到、車檢寄車、賽前說明會。\n【試騎】30min 確認變速／胎壓／補給袋位置。\n【試水】活水湖 10–15min——量水溫：<24°C 才可防寒衣，否則浮力褲（規則以現場公告為準，賽前一天定案）。\n晚餐熟悉碳水、確認 T1/T2 動線走一遍、9 點睡。','—');
+a(2027,4,24,'race','🏆 CT226（暫定日期，以官方公布為準）','【目標 12:34｜sub-13 留 26min 緩衝】\n\n【游 3.8k → 1:35】2:30/100m。出發後 200m 別捲進混戰，找同速腳泡跟游省 5–8% 力。定位每 6–8 划抬頭一次。省力上岸，游泳段的任務是「不預支」。\n【T1 → 8:00】照 3/20 彩排與 3/27 實戰流程，不趕不慌。\n【騎 180k → 5:50】AP ~151W、IF 0.70 硬上限。前 90min 壓 145–150W 絕不跟車衝（會有很多人超你，讓他們去）。補給 60–90g 碳水/hr＋電解質，每 15–20min 小口。風大守功率不守速度。踏頻 85+ 護膝。\n【T2 → 6:00】換 RC703… 不對，跑鞋！照流程。\n【跑 42.2k → 4:55】6:59/km。0–10k 刻意壓 7:10–7:15、心率 <155（這 10k 的自制決定最後 10k 是跑還是走）；10–32k 穩 6:55–7:00；32k 後看油箱收尾。每站補水、後段可樂。膝蓋警訊→走跑交替，完賽 > 成績。\n\n【總結】2017 的你 14:18。今天的你帶著 216W 的引擎、4 個月的 Brick、和 41 分鐘轉換教訓換來的 14 分鐘流程。執行就好，其他都做完了。','12:34｜游1:35/騎5:50@151W/跑4:55',true);
+a(2027,4,25,'rest','🎉 完賽隔日｜慶祝＋完全休息','把獎牌掛好、數據回報 Claude、大吃一頓。\n之後兩週不排任何課——恢復也是課表的一部分。','—');
+a(2027,4,26,'rest','恢復週','睡飽吃好，散步就好。','—');
+a(2027,4,27,'rest','恢復週','完全休息。','—');
+a(2027,4,28,'rest','恢復週','完全休息，或輕鬆泡水。','—');
+a(2027,4,29,'rest','恢復週','完全休息。','—');
+a(2027,4,30,'rest','恢復週','完全休息。下一個目標？等身體先說話。','—');
+
+const months = [
+  {year:2026,month:12,name:'2026/12月：新竹馬 → 恢復 → 過渡',
+   sub:'12/6 新竹馬 Sub-3:50 🏆｜12/7–20 恢復＋過渡｜12/22 起準備鐵人 Base',
+   note:'賽週不加訓練，前半 5:30 保守、25k 後 5:25、心率守 166 以下。跑完兩週「不練」就是課表，游泳最先回、跑步最後回（12/17 第一跑）。12/22 起進入 CT226 三鐵課表銜接，單車重返質量。💪肌力 12 月中起進加強期。'},
+  {year:2027,month:1,name:'2027/1月：Base 期（游泳升量＋首次 Brick）',
+   sub:'週模板：💪一肌力 / 二騎質量 / 三游 / 四跑質量 / 五游 / 六長騎 / 日長跑｜1/16 Brick #1｜1/25–31 減量',
+   note:'長騎 2.5→3→3.5h 灌入 145–155W 賽事功率段（體感應該「太輕鬆」，這是對的）。1/16 首次 Brick：T1 流程計時＋轉換心肺專項。長跑 12→14→16k、後段練三鐵MP「刻意慢」。1/25–31 減量週。狀態極好可月底加測 CP20 更新分區（非必要）。'},
+  {year:2027,month:2,name:'2027/2月：Build 1（長騎 4h＋Brick 常態化）',
+   sub:'2/5-2/10 春節全家旅遊｜2/13 Brick #2｜2/20 長騎 4h ⭐｜2/22–28 減量',
+   note:'2/5–2/10 春節假期全家旅遊，完全休息、零罪惡感。假期後回正軌：2/13 Brick #2（T1 要比 #1 快）、2/20 長騎 4h 完整補給演練（60–90g 碳水/hr 是 CT226 成敗一半）、2/21 長跑 18k。2/22 起減量週。'},
+  {year:2027,month:3,name:'2027/3月：Build 2 峰值 → 普悠瑪雙日',
+   sub:'3/6 大Brick ⭐｜3/10 游 3k 模擬 ⭐｜3/14 長跑峰值 20k ⭐｜3/20 全裝彩排｜3/27 普悠瑪113 🏁＋3/28 51.5 🏁',
+   note:'3/1–14 全計畫最大兩週：3/6 騎4.5h＋跑30min、3/10 游泳 3k 長游、3/14 長跑 20k 峰值。3/15 起 taper 進普悠瑪。3/27 是 CT226 的 dress rehearsal——執行品質是 KPI 不是成績；3/28 純 Z2 陪騎拿雙獎座、膝蓋優先。賽後完整回報數據，4/1 據此修 CT226 配速。💪肌力 3/17 後只留①④。'},
+  {year:2027,month:4,name:'2027/4月：修正 → 最後大課 → Taper → CT226',
+   sub:'4/1 依 113 數據修配速｜4/10 Brick #5 最後大課 ⭐｜4/12 起兩段 taper｜4/23 赴台東｜4/24 CT226 🏆（暫定）',
+   note:'⚠️ CT226 日期暫定 4/24（六），官方公布後修正。4/1 檢討日：3/27 數據決定游泳配速、騎 IF、跑前 10k 壓多慢的最終版。4/10 最後大課後只剩 taper——之後任何「多練一點」都是扣分。4/23 赴台東試水（<24°C 才可防寒衣，賽前一天定案）。4/24 執行 12:34 計畫：游 1:35／T1 8／騎 5:50 @151W／T2 6／跑 4:55。'},
+];
+
+const DOW_LABELS = ['一','二','三','四','五','六','日'];
+
+function buildMonth(cfg){
+  const {year,month,name,sub,note} = cfg;
+  const firstDate = new Date(year,month-1,1);
+  const firstDow = firstDate.getDay();
+  const firstCol = (firstDow + 6) % 7;
+  const daysInMonth = new Date(year,month,0).getDate();
+
+  let html = `<div class="month-block">
+    <div class="month-header">
+      <div class="month-title">${name}</div>
+      <div class="month-sub">${sub}</div>
+    </div>
+    <div class="month-note">${note}</div>
+    <div class="cal-grid">
+      <div class="dow-header">${DOW_LABELS.map(d=>`<span>${d}</span>`).join('')}</div>`;
+
+  let day = 1;
+  let col = firstCol;
+  let weekOpen = false;
+
+  while(day <= daysInMonth){
+    if(!weekOpen){
+      html += '<div class="cal-week">';
+      weekOpen = true;
+      if(day===1 && col>0){
+        for(let j=0;j<col;j++) html += '<div class="cal-day empty"></div>';
+      }
+    }
+    const key = `${year}-${month}-${day}`;
+    const ev = S[key];
+    if(ev){
+      const t = T[ev.type]||T.rest;
+      let dist='';
+      const m2 = ev.title.match(/[0-9]+\.?[0-9]*(?:km|k|h|min)/);
+      if(m2) dist=m2[0];
+      html += `<div class="cal-day" style="background:${t.bg}" onclick="showModal(${year},${month},${day})">`;
+      html += `<div class="day-num" style="color:${t.color}">${day}</div>`;
+      if(ev.star) html += `<span class="star">⭐</span>`;
+      html += `<span class="day-badge" style="background:${t.bg};color:${t.color}">${t.label}</span>`;
+      if(dist) html += `<div class="day-dist" style="color:${t.color}">${dist}</div>`;
+      html += `</div>`;
+    } else {
+      html += `<div class="cal-day empty"><div class="day-num">${day}</div></div>`;
+    }
+    col++;
+    if(col===7){html+='</div>';weekOpen=false;col=0;}
+    day++;
+  }
+  if(weekOpen){
+    for(let k=col;k<7;k++) html+='<div class="cal-day empty"></div>';
+    html+='</div>';
+  }
+  html+='</div></div>';
+  return html;
+}
+document.getElementById('calendars').innerHTML = months.map(buildMonth).join('');
+
+function showModal(y,m,d){
+  const ev = S[`${y}-${m}-${d}`];
+  if(!ev) return;
+  const t = T[ev.type]||T.rest;
+  const dow = ['日','一','二','三','四','五','六'];
+  const dateObj = new Date(y,m-1,d);
+  document.getElementById('modalDate').textContent = `${y}/${m}/${d}（週${dow[dateObj.getDay()]}）`;
+  document.getElementById('modalTitle').textContent = ev.title;
+  const badge = document.getElementById('modalBadge');
+  badge.textContent = t.label; badge.style.background = t.bg; badge.style.color = t.color;
+  document.getElementById('modalDetail').textContent = ev.detail;
+  document.getElementById('modalHR').textContent = '強度／配速：' + ev.hr;
+  document.getElementById('modalOverlay').classList.add('open');
+}
+function closeModal(e){
+  if(!e || e.target === document.getElementById('modalOverlay'))
+    document.getElementById('modalOverlay').classList.remove('open');
+}
+</script>
+</body>
+</html>
